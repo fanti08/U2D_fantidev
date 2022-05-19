@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebd2bcd9bdf68c418ead3acd44fb233, type: 3}
+  m_Name: ExampleDungeon 1
+  m_EditorClassIdentifier: 
+  walkableLayer: 4
+  applyMeshToWalls: 0
+  wallsLayer: 0
+  hidePredecesors: 1
+  useProceduralAsigment: 1
+  useArtificialAsigment: 0
+  showGlobalSettings: 1
+  hasDecoration: 1
+  useGlobalDecoration: 1
+  useGlobalBrush: 1
+  useGlobalStructuresSpecifications: 1
+  segments:
+  - artificialDisplacement: {x: 0, y: 0, z: 0}
+    useLoader: 1
+    loaderAngle: 0
+    deltaLoaderPos: {x: 0, y: 0, z: 0}
+    useExtra: 0
+    extra: {fileID: 0}
+    extraPos: {x: 0, y: 0, z: 0}
+    floors: 1
+    shape: {fileID: 11400000, guid: d7bc57c9add9b7944bca101769ce2056, type: 2}
+    useMargin: 1
+    margin: 8
+    walls: {fileID: 11400000, guid: 1645b3b849a9d414685e86d5c5b283ab, type: 2}
+    structures: {fileID: 11400000, guid: 52917078ccd4c8f4bad23f0f64acb4ca, type: 2}
+    wallDeco: {fileID: 11400000, guid: a5fec3302a29b604990d3d65ce4683bd, type: 2}
+    cornerDeco: {fileID: 11400000, guid: 21bc254df3888d240a519191391d3b0f, type: 2}
+    floorDeco: {fileID: 11400000, guid: 1b6a6d2e4b221554a83da2a088ab4917, type: 2}
+    structuresHeight: -0.2
+    useGroundInStructures: 1
+    structuresGroundHeight: -0.1
+    applyMeshToStructures: 1
+    structuresLayer: 4
+    applyMeshToStructuresGround: 0
+    structuresGroundLayer: 0
+  - artificialDisplacement: {x: 0, y: 0, z: 0}
+    useLoader: 1
+    loaderAngle: 0
+    deltaLoaderPos: {x: 0, y: 0, z: 0}
+    useExtra: 0
+    extra: {fileID: 0}
+    extraPos: {x: 0, y: 0, z: 0}
+    floors: 3
+    shape: {fileID: 11400000, guid: 305661d0ba036ce49b8f4067f6f04840, type: 2}
+    useMargin: 1
+    margin: 8
+    walls: {fileID: 11400000, guid: 1645b3b849a9d414685e86d5c5b283ab, type: 2}
+    structures: {fileID: 11400000, guid: 52917078ccd4c8f4bad23f0f64acb4ca, type: 2}
+    wallDeco: {fileID: 11400000, guid: a5fec3302a29b604990d3d65ce4683bd, type: 2}
+    cornerDeco: {fileID: 11400000, guid: 21bc254df3888d240a519191391d3b0f, type: 2}
+    floorDeco: {fileID: 11400000, guid: 1b6a6d2e4b221554a83da2a088ab4917, type: 2}
+    structuresHeight: -0.2
+    useGroundInStructures: 1
+    structuresGroundHeight: -0.1
+    applyMeshToStructures: 1
+    structuresLayer: 4
+    applyMeshToStructuresGround: 0
+    structuresGroundLayer: 0
+  - artificialDisplacement: {x: 0, y: 0, z: 0}
+    useLoader: 1
+    loaderAngle: 0
+    deltaLoaderPos: {x: 0, y: 0, z: 0}
+    useExtra: 0
+    extra: {fileID: 0}
+    extraPos: {x: 0, y: 0, z: 0}
+    floors: 1
+    shape: {fileID: 11400000, guid: d7bc57c9add9b7944bca101769ce2056, type: 2}
+    useMargin: 1
+    margin: 8
+    walls: {fileID: 11400000, guid: 1645b3b849a9d414685e86d5c5b283ab, type: 2}
+    structures: {fileID: 11400000, guid: 52917078ccd4c8f4bad23f0f64acb4ca, type: 2}
+    wallDeco: {fileID: 11400000, guid: a5fec3302a29b604990d3d65ce4683bd, type: 2}
+    cornerDeco: {fileID: 11400000, guid: 21bc254df3888d240a519191391d3b0f, type: 2}
+    floorDeco: {fileID: 11400000, guid: 1b6a6d2e4b221554a83da2a088ab4917, type: 2}
+    structuresHeight: -0.2
+    useGroundInStructures: 1
+    structuresGroundHeight: -0.1
+    applyMeshToStructures: 1
+    structuresLayer: 4
+    applyMeshToStructuresGround: 0
+    structuresGroundLayer: 0

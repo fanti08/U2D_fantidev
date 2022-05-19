@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f948bb098195d749ac979ca8ee27d7a, type: 3}
+  m_Name: ExampleFloorDecoration 1
+  m_EditorClassIdentifier: 
+  probability: 20
+  decorations:
+  - isStackable: 1
+    objeto: {fileID: -927199367670048503, guid: fb9ec213161c86c4b8fbab4e379aa72e,
+      type: 3}
+    material: {fileID: 2100000, guid: f81fa508f53fdf040b02976c92d930ea, type: 2}
+    probability: 8
+    deltaH: 0.03
+    ranRot: 1
+    rotation: {x: 0.000000021855694, y: -0.00000004371139, z: 1.0165751e-15, w: 1}
+  - isStackable: 1
+    objeto: {fileID: -927199367670048503, guid: 341cac9a3cdf91a4aa6e7050c6ae10e5,
+      type: 3}
+    material: {fileID: 2100000, guid: f81fa508f53fdf040b02976c92d930ea, type: 2}
+    probability: 30
+    deltaH: 0
+    ranRot: 1
+    rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  - isStackable: 1
+    objeto: {fileID: -927199367670048503, guid: 2ba05032eb3072b4f82393e163942e78,
+      type: 3}
+    material: {fileID: 2100000, guid: f81fa508f53fdf040b02976c92d930ea, type: 2}
+    probability: 65
+    deltaH: 0
+    ranRot: 1
+    rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  - isStackable: 1
+    objeto: {fileID: -927199367670048503, guid: aa18bf944d4af254991d2f10f0d3aa58,
+      type: 3}
+    material: {fileID: 2100000, guid: f81fa508f53fdf040b02976c92d930ea, type: 2}
+    probability: 85
+    deltaH: 0
+    ranRot: 1
+    rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  - isStackable: 1
+    objeto: {fileID: -927199367670048503, guid: b504c63309542384d88400b01ed5d3a3,
+      type: 3}
+    material: {fileID: 2100000, guid: fd721147c93e36e49910a77ee7a1f9d3, type: 2}
+    probability: 100
+    deltaH: 0
+    ranRot: 1
+    rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}

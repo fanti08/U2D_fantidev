@@ -1,0 +1,4 @@
+repository "MerC_Repo@Falk_Games_CloudOrg@cloud"
+  path "/"
+    br "/main"
+    co "/main"
