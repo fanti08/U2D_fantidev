@@ -393,7 +393,7 @@ public class MonsterAi : MonoBehaviour {
 				}
 				Transform bulletShootout = Instantiate(attackPrefab.transform, attackPoint.position , attackPoint.rotation) as Transform;
 				bulletShootout.gameObject.SetActive(true);
-				bulletShootout.GetComponent<BulletStatus>().Setting(stat.atk , stat.matk , "Enemy" , this.gameObject);
+				bulletShootout.GetComponent<BulletStatus>().Setting(stat.atk , stat.satk , "Enemy" , this.gameObject);
 				c++;
 				if(c >= attackAnimationTrigger.Length){
 					c = 0;
@@ -528,7 +528,7 @@ public class MonsterAi : MonoBehaviour {
 					
 					Transform bulletShootout = Instantiate(skill[s].skillPrefab.transform , attackPoint.position , attackPoint.rotation) as Transform;
 					bulletShootout.gameObject.SetActive(true);
-					bulletShootout.GetComponent<BulletStatus>().Setting(stat.atk , stat.matk , "Enemy" , this.gameObject);
+					bulletShootout.GetComponent<BulletStatus>().Setting(stat.atk , stat.satk , "Enemy" , this.gameObject);
 					if(skill[s].spawnAtPlayer && followTarget){
 						bulletShootout.position = followTarget.position;
 					}

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class SkillTreeButton : MonoBehaviour {
@@ -72,7 +70,7 @@ public class SkillTreeButton : MonoBehaviour {
 		skillTree.tooltipName.text = skillName;
 		
 		skillTree.tooltipText.text = description;
-		skillTree.mpCostTooltip.text = "MP : " + db.skill[skillId].manaCost.ToString();
+		skillTree.stmCostTooltip.text = "STM : " + db.skill[skillId].staminaCost.ToString();
 		
 		skillTree.tooltip.SetActive(true);
 	}

@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour {
 		GlobalStatus.LoadPlayerStatus(respawn);
 
 		respawn.GetComponent<Status>().health = respawn.GetComponent<Status>().maxHealth;
-		respawn.GetComponent<Status>().mana = respawn.GetComponent<Status>().maxMana;
+		respawn.GetComponent<Status>().stamina = respawn.GetComponent<Status>().maxStamina;
 
 		Destroy(gameObject);
 	}

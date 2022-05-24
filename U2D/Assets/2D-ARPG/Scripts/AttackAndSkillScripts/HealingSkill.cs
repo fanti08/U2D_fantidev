@@ -44,7 +44,7 @@ public class HealingSkill : MonoBehaviour {
 			int varMin = 100 - variance;
 			int varMax = 100 + variance;
 			if(GetComponent<BulletStatus>().shooter){
-				hpRestore += GetComponent<BulletStatus>().shooter.GetComponent<Status>().totalStat.matk;
+				hpRestore += GetComponent<BulletStatus>().shooter.GetComponent<Status>().totalStat.satk;
 			}
 			hpRestore = hpRestore * Random.Range(varMin ,varMax) / 100;
 			

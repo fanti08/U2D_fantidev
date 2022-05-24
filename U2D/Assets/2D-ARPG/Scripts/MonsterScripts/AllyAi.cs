@@ -452,7 +452,7 @@ public class AllyAi : MonoBehaviour {
 				}
 				Transform bulletShootout = Instantiate(attackPrefab.transform, attackPoint.position , attackPoint.rotation) as Transform;
 				bulletShootout.gameObject.SetActive(true);
-				bulletShootout.GetComponent<BulletStatus>().Setting(stat.atk , stat.matk , "Player" , this.gameObject);
+				bulletShootout.GetComponent<BulletStatus>().Setting(stat.atk , stat.satk , "Player" , this.gameObject);
 				c++;
 				if(c >= attackAnimationTrigger.Length){
 					c = 0;
@@ -598,7 +598,7 @@ public class AllyAi : MonoBehaviour {
 					
 					Transform bulletShootout = Instantiate(skill[s].skillPrefab.transform , attackPoint.position , attackPoint.rotation) as Transform;
 					bulletShootout.gameObject.SetActive(true);
-					bulletShootout.GetComponent<BulletStatus>().Setting(stat.atk , stat.matk , "Player" , this.gameObject);
+					bulletShootout.GetComponent<BulletStatus>().Setting(stat.atk , stat.satk , "Player" , this.gameObject);
 					if(skill[s].spawnAtPlayer && followTarget){
 						bulletShootout.position = followTarget.position;
 					}

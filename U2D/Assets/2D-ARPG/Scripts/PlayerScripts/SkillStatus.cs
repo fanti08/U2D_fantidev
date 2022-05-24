@@ -28,7 +28,7 @@ public class SkillStatus : MonoBehaviour {
 			return;
 		}
 		//GetComponent<AttackTrigger>().SetShortcut(slot);
-		GetComponent<AttackTrigger>().shortcuts[slot].skill.manaCost = database.skill[skillId].manaCost;
+		GetComponent<AttackTrigger>().shortcuts[slot].skill.staminaCost = database.skill[skillId].staminaCost;
 		GetComponent<AttackTrigger>().shortcuts[slot].skill.skillPrefab = database.skill[skillId].skillPrefab;
 		GetComponent<AttackTrigger>().shortcuts[slot].skill.skillAnimationTrigger = database.skill[skillId].skillAnimationTrigger;
 
@@ -69,7 +69,7 @@ public class SkillStatus : MonoBehaviour {
 		int n = 0;
 		while(n < GetComponent<AttackTrigger>().shortcuts.Length){
 			if(GetComponent<AttackTrigger>().shortcuts[n].type == AttackTrigger.ShortcutType.Skill){
-				GetComponent<AttackTrigger>().shortcuts[n].skill.manaCost = database.skill[atk.shortcuts[n].id].manaCost;
+				GetComponent<AttackTrigger>().shortcuts[n].skill.staminaCost = database.skill[atk.shortcuts[n].id].staminaCost;
 				GetComponent<AttackTrigger>().shortcuts[n].skill.skillPrefab = database.skill[atk.shortcuts[n].id].skillPrefab;
 				GetComponent<AttackTrigger>().shortcuts[n].skill.skillAnimationTrigger = database.skill[atk.shortcuts[n].id].skillAnimationTrigger;
 				
@@ -114,7 +114,7 @@ public class SkillStatus : MonoBehaviour {
 		int n = 0;
 		while(n < GetComponent<AttackTrigger>().shortcuts.Length){
 			if(GetComponent<AttackTrigger>().shortcuts[n].id == id && n != slot){
-				GetComponent<AttackTrigger>().shortcuts[n].skill.manaCost = 0;
+				GetComponent<AttackTrigger>().shortcuts[n].skill.staminaCost = 0;
 				GetComponent<AttackTrigger>().shortcuts[n].skill.skillPrefab = null;
 				GetComponent<AttackTrigger>().shortcuts[n].skill.skillAnimationTrigger = database.skill[0].skillAnimationTrigger;
 

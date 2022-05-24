@@ -11,7 +11,7 @@ public class ItemData : MonoBehaviour {
 		public string description = "";
 		public int price = 10;
 		public int hpRecover = 0;
-		public int mpRecover = 0;
+		public int stmRecover = 0;
 		public bool unusable = false;
 		public bool unlimited = false;
 		public string sendMsg = "";
@@ -30,7 +30,7 @@ public class ItemData : MonoBehaviour {
 
 		public int attack = 0;
 		public int defense = 0;
-		public int magicAttack = 0;
+		public int special = 0;
 		public int magicDefense = 0;
 		public int hpBonus = 0;
 		public int mpBonus = 0;
@@ -57,7 +57,7 @@ public class ItemData : MonoBehaviour {
 		[Range(0 , 100)]
 		public int drainTouch = 0;
 		[Range(0 , 100)]
-		public int mpReduce = 0;
+		public int stmReduce = 0;
 		[Tooltip("Set to 0 if not require any item when attacking.")]
 		public int requireItemId = 0;
 	} 

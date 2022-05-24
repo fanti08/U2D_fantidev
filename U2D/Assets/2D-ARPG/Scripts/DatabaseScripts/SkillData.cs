@@ -14,7 +14,7 @@ public class SkillSetting{
 	public Sprite icon;
 	public BulletStatus skillPrefab;
 	public string skillAnimationTrigger = "";
-	public int manaCost = 10;
+	public int staminaCost = 10;
 	public float castTime = 0.5f;
 	public float skillDelay = 0.3f;
 	public int coolDown = 1;

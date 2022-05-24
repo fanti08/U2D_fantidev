@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class SkillTreeUi : MonoBehaviour {
@@ -27,7 +25,7 @@ public class SkillTreeUi : MonoBehaviour {
 	public Image tooltipIcon;
 	public Text tooltipName;
 	public Text tooltipText;
-	public Text mpCostTooltip;
+	public Text stmCostTooltip;
 	public SkillData database;
 
 	public void Start(){

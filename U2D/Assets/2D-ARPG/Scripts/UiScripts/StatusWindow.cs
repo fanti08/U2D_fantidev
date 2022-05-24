@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class StatusWindow : MonoBehaviour {
@@ -9,21 +7,21 @@ public class StatusWindow : MonoBehaviour {
 	public Text lv;
 	public Text atk;
 	public Text def;
-	public Text matk;
-	public Text mdef;
+	public Text satk;
+	public Text sdef;
 	public Text exp;
 	public Text nextLv;
 	public Text stPoint;
 	
 	public Text totalAtk;
 	public Text totalDef;
-	public Text totalMatk;
-	public Text totalMdef;
+	public Text totalSatk;
+	public Text totalSdef;
 	
 	public Button atkUpButton;
 	public Button defUpButton;
-	public Button matkUpButton;
-	public Button mdefUpButton;
+	public Button satkUpButton;
+	public Button sdefUpButton;
 	
 	void Start(){
 		if(!player){
@@ -49,11 +47,11 @@ public class StatusWindow : MonoBehaviour {
 		if(def){
 			def.text = stat.def.ToString();
 		}
-		if(matk){
-			matk.text = stat.matk.ToString();
+		if(satk){
+			satk.text = stat.satk.ToString();
 		}
-		if(mdef){
-			mdef.text = stat.mdef.ToString();
+		if(sdef){
+			sdef.text = stat.sdef.ToString();
 		}
 		
 		if(exp){
@@ -72,11 +70,11 @@ public class StatusWindow : MonoBehaviour {
 		if(totalDef){
 			totalDef.text = "(" + stat.totalStat.def.ToString() + ")";
 		}
-		if(totalMatk){
-			totalMatk.text = "(" + stat.totalStat.matk.ToString() + ")";
+		if(totalSatk){
+			totalSatk.text = "(" + stat.totalStat.satk.ToString() + ")";
 		}
-		if(totalMdef){
-			totalMdef.text = "(" + stat.totalStat.mdef.ToString() + ")";
+		if(totalSdef){
+			totalSdef.text = "(" + stat.totalStat.sdef.ToString() + ")";
 		}
 		
 		if(stat.statusPoint > 0){
@@ -84,25 +82,25 @@ public class StatusWindow : MonoBehaviour {
 				atkUpButton.gameObject.SetActive(true);
 			if(defUpButton)
 				defUpButton.gameObject.SetActive(true);
-			if(matkUpButton)
-				matkUpButton.gameObject.SetActive(true);
-			if(mdefUpButton)
-				mdefUpButton.gameObject.SetActive(true);
+			if(satkUpButton)
+				satkUpButton.gameObject.SetActive(true);
+			if(sdefUpButton)
+				sdefUpButton.gameObject.SetActive(true);
 		}else{
 			if(atkUpButton)
 				atkUpButton.gameObject.SetActive(false);
 			if(defUpButton)
 				defUpButton.gameObject.SetActive(false);
-			if(matkUpButton)
-				matkUpButton.gameObject.SetActive(false);
-			if(mdefUpButton)
-				mdefUpButton.gameObject.SetActive(false);
+			if(satkUpButton)
+				satkUpButton.gameObject.SetActive(false);
+			if(sdefUpButton)
+				sdefUpButton.gameObject.SetActive(false);
 		}
 		
 	}
 	
 	public void UpgradeStatus(int statusId){
-		//0 = Atk , 1 = Def , 2 = Matk , 3 = Mdef
+		//0 = Atk , 1 = Def , 2 = Satk , 3 = Sdef
 		if(!player){
 			return;
 		}
@@ -119,13 +117,13 @@ public class StatusWindow : MonoBehaviour {
 			stat.CalculateStatus();
 		}
 		if(statusId == 2 && stat.statusPoint > 0){
-			stat.matk += 1;
-			stat.maxMana += 3;
+			stat.satk += 1;
+			stat.maxStamina += 3;
 			stat.statusPoint -= 1;
 			stat.CalculateStatus();
 		}
 		if(statusId == 3 && stat.statusPoint > 0){
-			stat.mdef += 1;
+			stat.sdef += 1;
 			stat.statusPoint -= 1;
 			stat.CalculateStatus();
 		}

@@ -1,19 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class HpMpRegen : MonoBehaviour {
+public class HpStmRegen : MonoBehaviour {
 	public int hpRegen = 0;
-	public int mpRegen = 3;
+	public int stmRegen = 3;
 	public float hpRegenDelay = 3.0f;
-	public float mpRegenDelay = 3.0f;
+	public float stmRegenDelay = 3.0f;
 	
 	private float hpTime = 0.0f;
-	private float mpTime = 0.0f;
+	private float stmTime = 0.0f;
 	private Status stat;
 	
 	void Start(){
-		stat= GetComponent<Status>();
+		stat = GetComponent<Status>();
 	}
 	
 	void Update(){
@@ -25,11 +23,11 @@ public class HpMpRegen : MonoBehaviour {
 			}
 		}
 		//----------------------------------------------------
-		if(mpRegen > 0 && stat.mana < stat.totalStat.mana){
-			if(mpTime >= mpRegenDelay){
-				MPRecovery();
+		if(stmRegen > 0 && stat.stamina < stat.totalStat.stamina){
+			if(stmTime >= stmRegenDelay){
+				STMRecovery();
 			}else{
-				mpTime += Time.deltaTime;
+				stmTime += Time.deltaTime;
 			}
 		}
 	}
@@ -46,15 +44,15 @@ public class HpMpRegen : MonoBehaviour {
 		}
 	}
 	
-	void MPRecovery(){
-		int amount = stat.totalStat.mana * mpRegen / 100;
+	void STMRecovery(){
+		int amount = stat.totalStat.stamina * stmRegen / 100;
 		if(amount <= 1){
 			amount = 1;
 		}
-		stat.mana += amount;
-		mpTime = 0.0f;
-		if(stat.mana >= stat.totalStat.mana){
-			stat.mana = stat.totalStat.mana;
+		stat.stamina += amount;
+		stmTime = 0.0f;
+		if(stat.stamina >= stat.totalStat.stamina){
+			stat.stamina = stat.totalStat.stamina;
 		}
 	}
 }

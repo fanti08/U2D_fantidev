@@ -27,12 +27,6 @@ public class CraftingUi : MonoBehaviour {
 	private int selection = 0;
 	private int cPage = 0;
 	
-	private int itemQty1;
-	private int itemQty2;
-	private int itemQty3;
-	private int itemQty4;
-	private int itemQty5;
-	
 	public Color haveAllItemColor = Color.black;
 	public Color notEnoughtItemColor = Color.red;
 	

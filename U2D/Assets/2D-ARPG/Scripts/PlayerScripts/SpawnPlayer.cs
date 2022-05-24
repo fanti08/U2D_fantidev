@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
+﻿using UnityEngine;
 public class SpawnPlayer : MonoBehaviour{
 	public GameObject player;
 	public static bool onLoadGame;

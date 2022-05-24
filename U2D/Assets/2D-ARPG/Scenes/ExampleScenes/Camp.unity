@@ -10903,7 +10903,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Shop
+  m_Text: Dealer
 --- !u!222 &470549008
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -77659,7 +77659,7 @@ GameObject:
   - component: {fileID: 803132878}
   - component: {fileID: 803132877}
   m_Layer: 0
-  m_Name: Alchemist
+  m_Name: Medic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82341,7 +82341,7 @@ GameObject:
   - component: {fileID: 1035906481}
   - component: {fileID: 1035906487}
   m_Layer: 0
-  m_Name: Merchant
+  m_Name: Dealer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92719,7 +92719,7 @@ GameObject:
   - component: {fileID: 1585650918}
   - component: {fileID: 1585650917}
   m_Layer: 0
-  m_Name: Blacksmith
+  m_Name: Gunsmith
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94855,7 +94855,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alchemist
+  m_Text: Medic
 --- !u!222 &1719132898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -97104,7 +97104,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Blacksmith
+  m_Text: GunSmith
 --- !u!222 &1872608175
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -43,17 +43,17 @@ public class SaveLoad : MonoBehaviour {
 		PlayerPrefs.SetInt("PlayerLevel" +saveSlot.ToString(), GlobalStatus.level);
 		PlayerPrefs.SetInt("PlayerATK" +saveSlot.ToString(), GlobalStatus.atk);
 		PlayerPrefs.SetInt("PlayerDEF" +saveSlot.ToString(), GlobalStatus.def);
-		PlayerPrefs.SetInt("PlayerMATK" +saveSlot.ToString(), GlobalStatus.matk);
-		PlayerPrefs.SetInt("PlayerMDEF" +saveSlot.ToString(), GlobalStatus.mdef);
+		PlayerPrefs.SetInt("PlayerSATK" +saveSlot.ToString(), GlobalStatus.satk);
+		PlayerPrefs.SetInt("PlayerSDEF" +saveSlot.ToString(), GlobalStatus.sdef);
 		PlayerPrefs.SetInt("PlayerEXP" +saveSlot.ToString(), GlobalStatus.exp);
 		PlayerPrefs.SetInt("PlayerMaxEXP" +saveSlot.ToString(), GlobalStatus.maxExp);
 		PlayerPrefs.SetInt("PlayerMaxHP" +saveSlot.ToString(), GlobalStatus.maxHealth);
-		PlayerPrefs.SetInt("PlayerMaxMP" +saveSlot.ToString(), GlobalStatus.maxMana);
+		PlayerPrefs.SetInt("PlayerMaxMP" +saveSlot.ToString(), GlobalStatus.maxStamina);
 		PlayerPrefs.SetInt("PlayerSTP" +saveSlot.ToString(), GlobalStatus.statusPoint);
 		PlayerPrefs.SetInt("PlayerSKP" +saveSlot.ToString(), GlobalStatus.skillPoint);
 
 		PlayerPrefs.SetInt("PlayerHP" +saveSlot.ToString(), GlobalStatus.health);
-		PlayerPrefs.SetInt("PlayerMP" +saveSlot.ToString(), GlobalStatus.mana);
+		PlayerPrefs.SetInt("PlayerMP" +saveSlot.ToString(), GlobalStatus.stamina);
 		
 		PlayerPrefs.SetInt("Cash" +saveSlot.ToString(), GlobalStatus.cash);
 		int itemSize = GlobalStatus.itemSlot.Length;
@@ -150,18 +150,17 @@ public class SaveLoad : MonoBehaviour {
 		GlobalStatus.level = PlayerPrefs.GetInt("PlayerLevel" +saveSlot.ToString());
 		GlobalStatus.atk = PlayerPrefs.GetInt("PlayerATK" +saveSlot.ToString());
 		GlobalStatus.def = PlayerPrefs.GetInt("PlayerDEF" +saveSlot.ToString());
-		GlobalStatus.matk = PlayerPrefs.GetInt("PlayerMATK" +saveSlot.ToString());
-		GlobalStatus.mdef = PlayerPrefs.GetInt("PlayerMDEF" +saveSlot.ToString());
-		GlobalStatus.mdef = PlayerPrefs.GetInt("PlayerMDEF" +saveSlot.ToString());
+		GlobalStatus.satk = PlayerPrefs.GetInt("PlayerSATK" +saveSlot.ToString());
+		GlobalStatus.sdef = PlayerPrefs.GetInt("PlayerSDEF" +saveSlot.ToString());
 		GlobalStatus.exp = PlayerPrefs.GetInt("PlayerEXP" +saveSlot.ToString());
 		GlobalStatus.maxExp = PlayerPrefs.GetInt("PlayerMaxEXP" +saveSlot.ToString());
 		GlobalStatus.maxHealth = PlayerPrefs.GetInt("PlayerMaxHP" +saveSlot.ToString());
-		GlobalStatus.maxMana = PlayerPrefs.GetInt("PlayerMaxMP" +saveSlot.ToString());
+		GlobalStatus.maxStamina = PlayerPrefs.GetInt("PlayerMaxMP" +saveSlot.ToString());
 		GlobalStatus.statusPoint = PlayerPrefs.GetInt("PlayerSTP" +saveSlot.ToString());
 		GlobalStatus.skillPoint = PlayerPrefs.GetInt("PlayerSKP" +saveSlot.ToString());
 
 		GlobalStatus.health = PlayerPrefs.GetInt("PlayerHP" +saveSlot.ToString());
-		GlobalStatus.mana = PlayerPrefs.GetInt("PlayerMP" +saveSlot.ToString());
+		GlobalStatus.stamina = PlayerPrefs.GetInt("PlayerMP" +saveSlot.ToString());
 
 		//-------------------------------
 		GlobalStatus.cash = PlayerPrefs.GetInt("Cash" +saveSlot.ToString());

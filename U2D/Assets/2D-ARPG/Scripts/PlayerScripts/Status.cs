@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Status : MonoBehaviour {
@@ -11,14 +10,14 @@ public class Status : MonoBehaviour {
 	public int level = 1;
 	public int atk = 0;
 	public int def = 0;
-	public int matk = 0;
-	public int mdef = 0;
+	public int satk = 0;
+	public int sdef = 0;
 	public int exp = 0;
 	public int maxExp = 100;
 	public int maxHealth = 100;
 	public int health = 100;
-	public int maxMana = 100;
-	public int mana = 100;
+	public int maxStamina = 100;
+	public int stamina = 100;
 	public int statusPoint = 0;
 	public int skillPoint = 0;
 	private bool dead = false;
@@ -108,18 +107,18 @@ public class Status : MonoBehaviour {
 	public void CalculateStatus(){
 		totalStat.atk = atk + additionStat.atk + buffsStat.atk;
 		totalStat.def = def + additionStat.def + buffsStat.def;
-		totalStat.matk = matk + additionStat.matk + buffsStat.matk;
-		totalStat.mdef = mdef + additionStat.mdef + buffsStat.mdef;
+		totalStat.satk = satk + additionStat.satk + buffsStat.satk;
+		totalStat.sdef = sdef + additionStat.sdef + buffsStat.sdef;
 
 		totalStat.health = maxHealth + additionStat.health + buffsStat.health;
-		totalStat.mana = maxMana + additionStat.mana + buffsStat.mana;
-		//addMdef += mdef;
+		totalStat.stamina = maxStamina + additionStat.stamina + buffsStat.stamina;
+		//addSdef += sdef;
 		if(health >= totalStat.health){
 			health = totalStat.health;
 		}
 		
-		if(mana >= totalStat.mana){
-			mana = totalStat.mana;
+		if(stamina >= totalStat.stamina){
+			stamina = totalStat.stamina;
 		}
 		totalResist.poisonResist = statusResist.poisonResist + eqResist.poisonResist;
 		totalResist.silenceResist = statusResist.silenceResist + eqResist.silenceResist;
@@ -160,7 +159,7 @@ public class Status : MonoBehaviour {
 			if(!isMagic){
 				amount -= totalStat.def;
 			}else{
-				amount -= totalStat.mdef;
+				amount -= totalStat.sdef;
 			}
 
 			//Calculate Element Effective
@@ -199,14 +198,14 @@ public class Status : MonoBehaviour {
 		level++;
 		statusPoint += 5;
 		skillPoint++;
-		//Extend the Max EXP, Max Health and Max Mana
+		//Extend the Max EXP, Max Health and Max Stamina
 		maxExp = 125 * maxExp  / 100;
 		maxHealth += 20;
-		maxMana += 10;
-		//Recover Health and Mana
+		maxStamina += 10;
+		//Recover Health and Stamina
 		CalculateStatus();
 		health = totalStat.health;
-		mana = totalStat.mana;
+		stamina = totalStat.stamina;
 		GainEXP(0);
 		if(levelUpEffect){
 			Instantiate(levelUpEffect , transform.position , Quaternion.identity);
@@ -216,15 +215,15 @@ public class Status : MonoBehaviour {
 		}
 	}
 
-	public void Heal(int hp , int mp){
+	public void Heal(int hp , int stm){
 		health += hp;
 		if(health >= totalStat.health){
 			health = totalStat.health;
 		}
 		
-		mana += mp;
-		if(mana >= totalStat.mana){
-			mana = totalStat.mana;
+		stamina += stm;
+		if(stamina >= totalStat.stamina){
+			stamina = totalStat.stamina;
 		}
 	}
 
@@ -423,10 +422,10 @@ public class Status : MonoBehaviour {
 		//Increase Magic Defense
 		if(!mbarrier){
 			mbarrier = true;
-			buffsStat.mdef = amount;
+			buffsStat.sdef = amount;
 			CalculateStatus();
 			yield return new WaitForSeconds(dur);
-			buffsStat.mdef = 0;
+			buffsStat.sdef = 0;
 			mbarrier = false;
 			CalculateStatus();
 		}
@@ -446,13 +445,13 @@ public class Status : MonoBehaviour {
 	}
 	
 	public IEnumerator OnFaith (int amount , float dur){
-		//Increase Magic Attack
+		//Increase Special
 		if(!faith){
 			faith = true;
-			buffsStat.matk = amount;
+			buffsStat.satk = amount;
 			CalculateStatus();
 			yield return new WaitForSeconds(dur);
-			buffsStat.matk = 0;
+			buffsStat.satk = 0;
 			faith = false;
 			CalculateStatus();
 		}
@@ -513,7 +512,7 @@ public class HiddenStat{
 	public bool doubleJump = false;
 	public int drainTouch = 0;
 	public int autoGuard = 0;
-	public int mpReduce = 0;
+	public int stmReduce = 0;
 }
 
 [System.Serializable]
@@ -558,8 +557,8 @@ public enum ElementalAtk{
 public class MainStatus{
 	public int atk = 0;
 	public int def = 0;
-	public int matk = 0;
-	public int mdef = 0;
+	public int satk = 0;
+	public int sdef = 0;
 	public int health = 0;
-	public int mana = 0;
+	public int stamina = 0;
 }

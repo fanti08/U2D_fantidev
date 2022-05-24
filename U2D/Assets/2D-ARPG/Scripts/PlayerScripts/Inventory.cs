@@ -43,7 +43,7 @@ public class Inventory : MonoBehaviour{
 		if(database.usableItem[id].unusable){
 			return;
 		}
-		GetComponent<Status>().Heal(database.usableItem[id].hpRecover , database.usableItem[id].mpRecover);
+		GetComponent<Status>().Heal(database.usableItem[id].hpRecover , database.usableItem[id].stmRecover);
 		if(database.usableItem[id].sendMsg != ""){
 			SendMessage(database.usableItem[id].sendMsg , SendMessageOptions.DontRequireReceiver);
 		}
@@ -169,45 +169,45 @@ public class Inventory : MonoBehaviour{
 		//Set New Variable of Weapon
 		stat.additionStat.atk = database.equipment[weaponEquip].attack;
 		stat.additionStat.def = database.equipment[weaponEquip].defense;
-		stat.additionStat.matk = database.equipment[weaponEquip].magicAttack;
-		stat.additionStat.mdef = database.equipment[weaponEquip].magicDefense;
+		stat.additionStat.satk = database.equipment[weaponEquip].special;
+		stat.additionStat.sdef = database.equipment[weaponEquip].magicDefense;
 		stat.additionStat.health = database.equipment[weaponEquip].hpBonus;
-		stat.additionStat.mana = database.equipment[weaponEquip].mpBonus;
+		stat.additionStat.stamina = database.equipment[weaponEquip].mpBonus;
 		//Set New Variable of Armor
 		stat.additionStat.atk += database.equipment[armorEquip].attack;
 		stat.additionStat.def += database.equipment[armorEquip].defense;
-		stat.additionStat.matk += database.equipment[armorEquip].magicAttack;
-		stat.additionStat.mdef += database.equipment[armorEquip].magicDefense;
+		stat.additionStat.satk += database.equipment[armorEquip].special;
+		stat.additionStat.sdef += database.equipment[armorEquip].magicDefense;
 		stat.additionStat.health += database.equipment[armorEquip].hpBonus;
-		stat.additionStat.mana += database.equipment[armorEquip].mpBonus;
+		stat.additionStat.stamina += database.equipment[armorEquip].mpBonus;
 		//Set New Variable of Hat
 		stat.additionStat.atk += database.equipment[hatEquip].attack;
 		stat.additionStat.def += database.equipment[hatEquip].defense;
-		stat.additionStat.matk += database.equipment[hatEquip].magicAttack;
-		stat.additionStat.mdef += database.equipment[hatEquip].magicDefense;
+		stat.additionStat.satk += database.equipment[hatEquip].special;
+		stat.additionStat.sdef += database.equipment[hatEquip].magicDefense;
 		stat.additionStat.health += database.equipment[hatEquip].hpBonus;
-		stat.additionStat.mana += database.equipment[hatEquip].mpBonus;
+		stat.additionStat.stamina += database.equipment[hatEquip].mpBonus;
 		//Set New Variable of Gloves
 		stat.additionStat.atk += database.equipment[glovesEquip].attack;
 		stat.additionStat.def += database.equipment[glovesEquip].defense;
-		stat.additionStat.matk += database.equipment[glovesEquip].magicAttack;
-		stat.additionStat.mdef += database.equipment[glovesEquip].magicDefense;
+		stat.additionStat.satk += database.equipment[glovesEquip].special;
+		stat.additionStat.sdef += database.equipment[glovesEquip].magicDefense;
 		stat.additionStat.health += database.equipment[glovesEquip].hpBonus;
-		stat.additionStat.mana += database.equipment[glovesEquip].mpBonus;
+		stat.additionStat.stamina += database.equipment[glovesEquip].mpBonus;
 		//Set New Variable of Boots
 		stat.additionStat.atk += database.equipment[bootsEquip].attack;
 		stat.additionStat.def += database.equipment[bootsEquip].defense;
-		stat.additionStat.matk += database.equipment[bootsEquip].magicAttack;
-		stat.additionStat.mdef += database.equipment[bootsEquip].magicDefense;
+		stat.additionStat.satk += database.equipment[bootsEquip].special;
+		stat.additionStat.sdef += database.equipment[bootsEquip].magicDefense;
 		stat.additionStat.health += database.equipment[bootsEquip].hpBonus;
-		stat.additionStat.mana += database.equipment[bootsEquip].mpBonus;
+		stat.additionStat.stamina += database.equipment[bootsEquip].mpBonus;
 		//Set New Variable of Accessory
 		stat.additionStat.atk += database.equipment[accessoryEquip].attack;
 		stat.additionStat.def += database.equipment[accessoryEquip].defense;
-		stat.additionStat.matk += database.equipment[accessoryEquip].magicAttack;
-		stat.additionStat.mdef += database.equipment[accessoryEquip].magicDefense;
+		stat.additionStat.satk += database.equipment[accessoryEquip].special;
+		stat.additionStat.sdef += database.equipment[accessoryEquip].magicDefense;
 		stat.additionStat.health += database.equipment[accessoryEquip].hpBonus;
-		stat.additionStat.mana += database.equipment[accessoryEquip].mpBonus;
+		stat.additionStat.stamina += database.equipment[accessoryEquip].mpBonus;
 		//Elemental Resist
 		stat.eqElemental.normal = database.equipment[weaponEquip].elementlResistance.normal + database.equipment[armorEquip].elementlResistance.normal + database.equipment[accessoryEquip].elementlResistance.normal + database.equipment[hatEquip].elementlResistance.normal + database.equipment[glovesEquip].elementlResistance.normal + database.equipment[bootsEquip].elementlResistance.normal;
 		stat.eqElemental.fire = database.equipment[weaponEquip].elementlResistance.fire + database.equipment[armorEquip].elementlResistance.fire + database.equipment[accessoryEquip].elementlResistance.fire + database.equipment[hatEquip].elementlResistance.fire + database.equipment[glovesEquip].elementlResistance.fire + database.equipment[bootsEquip].elementlResistance.fire;
@@ -245,7 +245,7 @@ public class Inventory : MonoBehaviour{
 		}
 		stat.hiddenStatus.autoGuard = database.equipment[weaponEquip].autoGuard + database.equipment[armorEquip].autoGuard + database.equipment[accessoryEquip].autoGuard + database.equipment[hatEquip].autoGuard + database.equipment[glovesEquip].autoGuard + database.equipment[bootsEquip].autoGuard;
 		stat.hiddenStatus.drainTouch = database.equipment[weaponEquip].drainTouch + database.equipment[armorEquip].drainTouch + database.equipment[accessoryEquip].drainTouch + database.equipment[hatEquip].drainTouch + database.equipment[glovesEquip].drainTouch + database.equipment[bootsEquip].drainTouch;
-		stat.hiddenStatus.mpReduce = database.equipment[weaponEquip].mpReduce + database.equipment[armorEquip].mpReduce + database.equipment[accessoryEquip].mpReduce + database.equipment[hatEquip].mpReduce + database.equipment[glovesEquip].mpReduce + database.equipment[bootsEquip].mpReduce;
+		stat.hiddenStatus.stmReduce = database.equipment[weaponEquip].stmReduce + database.equipment[armorEquip].stmReduce + database.equipment[accessoryEquip].stmReduce + database.equipment[hatEquip].stmReduce + database.equipment[glovesEquip].stmReduce + database.equipment[bootsEquip].stmReduce;
 		
 		stat.CalculateStatus();
 	}

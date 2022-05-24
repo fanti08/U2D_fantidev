@@ -9430,14 +9430,14 @@ MonoBehaviour:
   level: 1
   atk: 4
   def: 2
-  matk: 3
-  mdef: 1
+  satk: 0
+  sdef: 0
   exp: 0
   maxExp: 100
   maxHealth: 200
   health: 200
-  maxMana: 100
-  mana: 100
+  maxStamina: 100
+  stamina: 100
   statusPoint: 0
   skillPoint: 0
   immortal: 0
@@ -9454,29 +9454,29 @@ MonoBehaviour:
   additionStat:
     atk: 0
     def: 0
-    matk: 0
-    mdef: 0
+    satk: 0
+    sdef: 0
     health: 0
-    mana: 0
+    stamina: 0
   buffsStat:
     atk: 0
     def: 0
-    matk: 0
-    mdef: 0
+    satk: 0
+    sdef: 0
     health: 0
-    mana: 0
+    stamina: 0
   totalStat:
     atk: 0
     def: 0
-    matk: 0
-    mdef: 0
+    satk: 0
+    sdef: 0
     health: 0
-    mana: 0
+    stamina: 0
   hiddenStatus:
     doubleJump: 0
     drainTouch: 0
     autoGuard: 0
-    mpReduce: 0
+    stmReduce: 0
   spawnPointName: 
   poison: 0
   silence: 0
@@ -9612,7 +9612,7 @@ MonoBehaviour:
       icon: {fileID: 0}
       skillPrefab: {fileID: 0}
       skillAnimationTrigger: cast
-      manaCost: 10
+      staminaCost: 10
       castTime: 0.2
       skillDelay: 0.3
       coolDown: 10
@@ -9635,7 +9635,7 @@ MonoBehaviour:
       icon: {fileID: 0}
       skillPrefab: {fileID: 0}
       skillAnimationTrigger: 
-      manaCost: 10
+      staminaCost: 10
       castTime: 0.5
       skillDelay: 0.3
       coolDown: 1
@@ -9658,7 +9658,7 @@ MonoBehaviour:
       icon: {fileID: 0}
       skillPrefab: {fileID: 0}
       skillAnimationTrigger: 
-      manaCost: 10
+      staminaCost: 10
       castTime: 0.5
       skillDelay: 0.3
       coolDown: 1
@@ -9681,7 +9681,7 @@ MonoBehaviour:
       icon: {fileID: 0}
       skillPrefab: {fileID: 0}
       skillAnimationTrigger: 
-      manaCost: 10
+      staminaCost: 10
       castTime: 0.5
       skillDelay: 0.3
       coolDown: 1
@@ -9704,7 +9704,7 @@ MonoBehaviour:
       icon: {fileID: 0}
       skillPrefab: {fileID: 0}
       skillAnimationTrigger: 
-      manaCost: 10
+      staminaCost: 10
       castTime: 0.5
       skillDelay: 0.3
       coolDown: 1
@@ -9727,7 +9727,7 @@ MonoBehaviour:
       icon: {fileID: 0}
       skillPrefab: {fileID: 0}
       skillAnimationTrigger: 
-      manaCost: 10
+      staminaCost: 10
       castTime: 0.5
       skillDelay: 0.3
       coolDown: 1
@@ -9750,7 +9750,7 @@ MonoBehaviour:
       icon: {fileID: 0}
       skillPrefab: {fileID: 0}
       skillAnimationTrigger: 
-      manaCost: 10
+      staminaCost: 10
       castTime: 0.5
       skillDelay: 0.3
       coolDown: 1
@@ -9773,7 +9773,7 @@ MonoBehaviour:
       icon: {fileID: 0}
       skillPrefab: {fileID: 0}
       skillAnimationTrigger: cast
-      manaCost: 10
+      staminaCost: 10
       castTime: 0.2
       skillDelay: 0.3
       coolDown: 1
@@ -9949,9 +9949,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpRegen: 0
-  mpRegen: 2
+  stmRegen: 3
   hpRegenDelay: 3
-  mpRegenDelay: 3
+  stmRegenDelay: 3
 --- !u!114 &114224436769609626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10849,7 +10849,7 @@ MonoBehaviour:
   tooltipIcon: {fileID: 114392869870767554}
   tooltipName: {fileID: 114787102974345182}
   tooltipText: {fileID: 114189472321756156}
-  mpCostTooltip: {fileID: 114557429639039548}
+  stmCostTooltip: {fileID: 114557429639039548}
   database: {fileID: 114587703334864070, guid: 9a356f43d2fc759498b31dc14d15634b, type: 3}
 --- !u!1 &1347824907994250
 GameObject:
@@ -17513,13 +17513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6642841801d24ec4994ec3b540b3eb48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpBar: {fileID: 114419451776262658}
-  mpBar: {fileID: 114394109337188444}
-  expBar: {fileID: 114768450270345906}
-  hpText: {fileID: 114692496045552752}
-  mpText: {fileID: 114036541313772878}
-  lvText: {fileID: 114947296178835856}
   player: {fileID: 1322012539695564}
+  skillTree: {fileID: 0}
 --- !u!1 &1522286333985640
 GameObject:
   m_ObjectHideFlags: 0
@@ -32926,19 +32921,19 @@ MonoBehaviour:
   lv: {fileID: 114893629508571152}
   atk: {fileID: 114156326779868826}
   def: {fileID: 114587349870129038}
-  matk: {fileID: 114550032117035410}
-  mdef: {fileID: 114676125722565406}
+  satk: {fileID: 0}
+  sdef: {fileID: 0}
   exp: {fileID: 114350764243506016}
   nextLv: {fileID: 114757681433277616}
   stPoint: {fileID: 114241918689041880}
   totalAtk: {fileID: 114690013185040276}
   totalDef: {fileID: 114806793610440510}
-  totalMatk: {fileID: 114998861652629160}
-  totalMdef: {fileID: 114087110636957656}
+  totalSatk: {fileID: 0}
+  totalSdef: {fileID: 0}
   atkUpButton: {fileID: 114703850418617592}
   defUpButton: {fileID: 114547197449007008}
-  matkUpButton: {fileID: 114124410135846180}
-  mdefUpButton: {fileID: 114761014823105226}
+  satkUpButton: {fileID: 0}
+  sdefUpButton: {fileID: 0}
 --- !u!1 &1988490320793716
 GameObject:
   m_ObjectHideFlags: 0

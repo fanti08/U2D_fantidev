@@ -55,25 +55,25 @@ public class SummonSkill : MonoBehaviour {
 		min = minStatus.def * (maxLevel - currentLv)/(maxLevel - 1);
 		max = maxStatus.def * (currentLv - 1)/(maxLevel - 1);
 		stat.def = min + max;
-		//Matk
-		min = minStatus.matk * (maxLevel - currentLv)/(maxLevel - 1);
-		max = maxStatus.matk * (currentLv - 1)/(maxLevel - 1);
-		stat.matk = min + max;
-		//Mdef
-		min = minStatus.mdef * (maxLevel - currentLv)/(maxLevel - 1);
-		max = maxStatus.mdef * (currentLv - 1)/(maxLevel - 1);
-		stat.mdef = min + max;
+		//Satk
+		min = minStatus.satk * (maxLevel - currentLv)/(maxLevel - 1);
+		max = maxStatus.satk * (currentLv - 1)/(maxLevel - 1);
+		stat.satk = min + max;
+		//Sdef
+		min = minStatus.sdef * (maxLevel - currentLv)/(maxLevel - 1);
+		max = maxStatus.sdef * (currentLv - 1)/(maxLevel - 1);
+		stat.sdef = min + max;
 		
 		//HP
 		min = minStatus.maxHealth * (maxLevel - currentLv)/(maxLevel - 1);
 		max = maxStatus.maxHealth * (currentLv - 1)/(maxLevel - 1);
 		stat.maxHealth = min + max;
 		stat.health = stat.maxHealth;
-		//MP
-		min = minStatus.maxMana * (maxLevel - currentLv)/(maxLevel - 1);
-		max = maxStatus.maxMana * (currentLv - 1)/(maxLevel - 1);
-		stat.maxMana = min + max;
-		stat.mana = stat.maxMana;
+		//STM
+		min = minStatus.maxStamina * (maxLevel - currentLv)/(maxLevel - 1);
+		max = maxStatus.maxStamina * (currentLv - 1)/(maxLevel - 1);
+		stat.maxStamina = min + max;
+		stat.stamina = stat.maxStamina;
 	}
 }
 
@@ -81,8 +81,8 @@ public class SummonSkill : MonoBehaviour {
 public class StatusParam{
 	public int atk = 5;
 	public int def = 5;
-	public int matk = 5;
-	public int mdef = 5;
+	public int satk = 5;
+	public int sdef = 5;
 	public int maxHealth = 100;
-	public int maxMana = 100;
+	public int maxStamina = 100;
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GlobalStatus : MonoBehaviour {
@@ -18,17 +16,17 @@ public class GlobalStatus : MonoBehaviour {
 	public static int level = 1;
 	public static int atk = 0;
 	public static int def = 0;
-	public static int matk = 0;
-	public static int mdef = 0;
+	public static int satk = 0;
+	public static int sdef = 0;
 	public static int exp = 0;
 	public static int maxExp = 100;
 	public static int maxHealth = 100;
-	public static int maxMana = 100;
+	public static int maxStamina = 100;
 	public static int statusPoint = 0;
 	public static int skillPoint = 0;
 
 	public static int health = 100;
-	public static int mana = 100;
+	public static int stamina = 100;
 	
 	public static int cash = 0;
 	public static int[] itemSlot = new int[20];
@@ -63,15 +61,15 @@ public class GlobalStatus : MonoBehaviour {
 		level = stat.level;
 		atk = stat.atk;
 		def = stat.def;
-		matk = stat.matk;
-		mdef = stat.mdef;
+		satk = stat.satk;
+		sdef = stat.sdef;
 		exp = stat.exp;
 		maxExp = stat.maxExp;
 		maxHealth = stat.maxHealth;
-		maxMana = stat.maxMana;
+		maxStamina = stat.maxStamina;
 
 		health = stat.health;
-		mana = stat.mana;
+		stamina = stat.stamina;
 		
 		statusPoint = stat.statusPoint;
 		skillPoint = stat.skillPoint;
@@ -116,17 +114,17 @@ public class GlobalStatus : MonoBehaviour {
 		stat.level = level;
 		stat.atk = atk;
 		stat.def = def;
-		stat.matk = matk;
-		stat.mdef = mdef;
+		stat.satk = satk;
+		stat.sdef = sdef;
 		stat.exp = exp;
 		stat.maxExp = maxExp;
 		stat.maxHealth = maxHealth;
-		stat.maxMana = maxMana;
+		stat.maxStamina = maxStamina;
 		stat.statusPoint = statusPoint;
 		stat.skillPoint = skillPoint;
 
 		stat.health = health;
-		stat.mana = mana;
+		stat.stamina = stamina;
 		
 		Inventory inv = player.GetComponent<Inventory>();
 		inv.cash = cash;

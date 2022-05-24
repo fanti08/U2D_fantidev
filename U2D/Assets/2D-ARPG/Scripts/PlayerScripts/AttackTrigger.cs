@@ -123,16 +123,6 @@ public class AttackTrigger : MonoBehaviour{
 			GlobalStatus.mainPlayer = this.gameObject;
 		}
 		DontDestroyOnLoad(transform.gameObject);
-		//Create new Attack Point if you didn't have one.
-		/*/if(!attackPoint){
-			attackPoint = new GameObject().transform;
-			attackPoint.IsChildOf(transform);
-			attackPoint.position = transform.position;
-			attackPoint.rotation = transform.rotation;
-			attackPoint.name = "AttackPoint";
-
-			attackPoint = GameObject.Find("AttackPoint").transform;
-		}/*/
 		stat = GetComponent<Status>();
 		inv = GetComponent<Inventory>();
 		itemDB = GetComponent<Inventory>().database;
@@ -165,10 +155,6 @@ public class AttackTrigger : MonoBehaviour{
 		Vector3 pos = transform.position;
 		pos.z = 0;
 		transform.position = pos;
-
-		//UpdateShortcut();
-		//gameObject.layer = 10;
-		//Physics.IgnoreLayerCollision(10 , 11 , true);
 	}
 	
 	void Update(){
@@ -245,9 +231,6 @@ public class AttackTrigger : MonoBehaviour{
 		if(attackPoint && aimAtMouse){
 			Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(attackPoint.position);
 			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-			/*if(limitAimAngle != Vector2.zero){
-				angle = Mathf.Clamp(angle, limitAimAngle.x, limitAimAngle.y);
-			}*/
 		attackPoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 			attackPoint.position = transform.position;
 		}
@@ -461,7 +444,6 @@ public class AttackTrigger : MonoBehaviour{
 			}
 			if(shortcuts[a].type == ShortcutType.Skill){
 				shortcutUi[a].iconImage.gameObject.SetActive(true);
-				//shortcutUi[a].coolDownBackground.SetActive(false);
 				shortcutUi[a].quantityText.gameObject.SetActive(false);
 				shortcutUi[a].iconImage.sprite = skillDB.skill[shortcuts[a].id].icon;
 			}
@@ -555,7 +537,7 @@ public class AttackTrigger : MonoBehaviour{
 		while(n < shortcuts.Length){
 			if(shortcuts[n].id == pickupShortcutId && (int)shortcuts[n].type == pickupShortcutType && n != onShortCutSlot){
 				shortcuts[n].type = ShortcutType.None;
-				shortcuts[n].skill.manaCost = 0;
+				shortcuts[n].skill.staminaCost = 0;
 				shortcuts[n].skill.skillPrefab = null;
 
 				shortcuts[n].skill.icon = null;
@@ -635,9 +617,6 @@ public class AttackTrigger : MonoBehaviour{
 					}
 
 					Transform i = Instantiate(drop , dropPos , Quaternion.identity) as Transform;
-					/*i.GetComponent<AddItem>().itemID = pickupShortcutId;
-					i.GetComponent<AddItem>().itemType = ItType.Usable;
-					i.GetComponent<AddItem>().itemQuantity = qty;*/
 
 					i.GetComponentInChildren<AddItem>().itemID = pickupShortcutId;
 					i.GetComponentInChildren<AddItem>().itemType = ItType.Usable;
@@ -686,8 +665,6 @@ public class AttackTrigger : MonoBehaviour{
 				}
 
 				Transform i = Instantiate(drop , dropPos , Quaternion.identity) as Transform;
-				//i.GetComponent<AddItem>().itemID = pickupShortcutId;
-				//i.GetComponent<AddItem>().itemType = ItType.Equipment;
 
 				i.GetComponentInChildren<AddItem>().itemID = pickupShortcutId;
 				i.GetComponentInChildren<AddItem>().itemType = ItType.Equipment;
@@ -816,7 +793,7 @@ public class AttackTrigger : MonoBehaviour{
 		}
 
 		int str = GetComponent<Status>().totalStat.atk;
-		int matk = GetComponent<Status>().totalStat.matk;
+		int satk = GetComponent<Status>().totalStat.satk;
 		onAttacking = true;
 
 		// If Melee Dash
@@ -848,7 +825,7 @@ public class AttackTrigger : MonoBehaviour{
 		nextFire = Time.time + attackDelay;
 		Transform bulletShootout = Instantiate(attackPrefab[atkPref].transform, attackPoint.transform.position , attackPoint.transform.rotation) as Transform;
 		bulletShootout.gameObject.SetActive(true);
-		bulletShootout.GetComponent<BulletStatus>().Setting(str , matk , "Player" , this.gameObject);
+		bulletShootout.GetComponent<BulletStatus>().Setting(str , satk , "Player" , this.gameObject);
 		if(GetComponent<Status>().hiddenStatus.drainTouch > 0){
 			bulletShootout.GetComponent<BulletStatus>().drainHp += GetComponent<Status>().hiddenStatus.drainTouch;
 		}
@@ -880,7 +857,7 @@ public class AttackTrigger : MonoBehaviour{
 		}
 		
 		int str = GetComponent<Status>().totalStat.atk;
-		int matk = GetComponent<Status>().totalStat.matk;
+		int satk = GetComponent<Status>().totalStat.satk;
 		onAttacking = true;
 		
 		// If Melee Dash
@@ -912,7 +889,7 @@ public class AttackTrigger : MonoBehaviour{
 		nextFire = Time.time + charge[ch].attackDelay;
 		Transform bulletShootout = Instantiate(charge[ch].chargeAttackPrefab.transform, attackPoint.transform.position , attackPoint.transform.rotation) as Transform;
 		bulletShootout.gameObject.SetActive(true);
-		bulletShootout.GetComponent<BulletStatus>().Setting(str , matk , "Player" , this.gameObject);
+		bulletShootout.GetComponent<BulletStatus>().Setting(str , satk , "Player" , this.gameObject);
 		if(GetComponent<Status>().hiddenStatus.drainTouch > 0){
 			bulletShootout.GetComponent<BulletStatus>().drainHp += GetComponent<Status>().hiddenStatus.drainTouch;
 		}
@@ -941,24 +918,24 @@ public class AttackTrigger : MonoBehaviour{
 			yield break;
 		}
 		c = 0;
-		int cost = shortcuts[skillID].skill.manaCost;
-		if(GetComponent<Status>().hiddenStatus.mpReduce > 0){
-			//Calculate MP Reduce
-			int per = 100 - GetComponent<Status>().hiddenStatus.mpReduce;
+		int cost = shortcuts[skillID].skill.staminaCost;
+		if(GetComponent<Status>().hiddenStatus.stmReduce > 0){
+			//Calculate STM Reduce
+			int per = 100 - GetComponent<Status>().hiddenStatus.stmReduce;
 			if(per < 0){
 				per = 0;
 			}
 			cost *= per;
 			cost /= 100;
 		}
-		if(GetComponent<Status>().mana >= cost){
+		if(GetComponent<Status>().stamina >= cost){
 			if(shortcuts[skillID].skill.sendMsg != ""){
 				SendMessage(shortcuts[skillID].skill.sendMsg , SendMessageOptions.DontRequireReceiver);
 			}
-			GetComponent<Status>().mana -= cost;
+			GetComponent<Status>().stamina -= cost;
 
 			int str = GetComponent<Status>().totalStat.atk;
-			int matk = GetComponent<Status>().totalStat.matk;
+			int satk = GetComponent<Status>().totalStat.satk;
 			
 			if(sound.magicCastVoice){
 				GetComponent<AudioSource>().clip = sound.magicCastVoice;
@@ -994,13 +971,13 @@ public class AttackTrigger : MonoBehaviour{
 			if(shortcuts[skillID].skill.skillSpawn == BSpawnType.FromPlayer){
 				Transform bulletShootout = Instantiate(shortcuts[skillID].skill.skillPrefab.transform, attackPoint.transform.position , attackPoint.transform.rotation) as Transform;
 				bulletShootout.gameObject.SetActive(true);
-				bulletShootout.GetComponent<BulletStatus>().Setting(str , matk , "Player" , this.gameObject);
+				bulletShootout.GetComponent<BulletStatus>().Setting(str , satk , "Player" , this.gameObject);
 			}else{
 				Vector2 skillPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
 				Transform bulletShootout = Instantiate(shortcuts[skillID].skill.skillPrefab.transform, skillPos , attackPoint.transform.rotation) as Transform;
 				bulletShootout.gameObject.SetActive(true);
-				bulletShootout.GetComponent<BulletStatus>().Setting(str , matk , "Player" , this.gameObject);
+				bulletShootout.GetComponent<BulletStatus>().Setting(str , satk , "Player" , this.gameObject);
 			}
 			if(shortcuts[skillID].skill.soundEffect){
 				GetComponent<AudioSource>().PlayOneShot(shortcuts[skillID].skill.soundEffect);
@@ -1017,11 +994,7 @@ public class AttackTrigger : MonoBehaviour{
 				if(shortcuts[skillID].skill.skillSpawn == BSpawnType.FromPlayer){
 					Transform bulletShootout = Instantiate(shortcuts[skillID].skill.multipleHit[m].skillPrefab.transform, attackPoint.transform.position , attackPoint.transform.rotation) as Transform;
 					bulletShootout.gameObject.SetActive(true);
-					bulletShootout.GetComponent<BulletStatus>().Setting(str , matk , "Player" , this.gameObject);
-				}else{
-					/*Transform bulletShootout = Instantiate(shortcuts[skillID].skill.multipleHit[m].skillPrefab.transform, skillSpawnPos , transform.rotation) as Transform;
-					bulletShootout.gameObject.SetActive(true);
-					bulletShootout.GetComponent<BulletStatus>().Setting(str , matk , "Player" , this.gameObject);*/
+					bulletShootout.GetComponent<BulletStatus>().Setting(str , satk , "Player" , this.gameObject);
 				}
 				if(shortcuts[skillID].skill.multipleHit[m].soundEffect){
 					GetComponent<AudioSource>().PlayOneShot(shortcuts[skillID].skill.multipleHit[m].soundEffect);
@@ -1035,7 +1008,7 @@ public class AttackTrigger : MonoBehaviour{
 			meleefwd = false;
 			GetComponent<Status>().canControl = true;
 		}else{
-			StartCoroutine(ShowPrintingText("Not Enough MP!!"));
+			StartCoroutine(ShowPrintingText("Not Enough STM!!"));
 		}
 	}
 

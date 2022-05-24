@@ -1,21 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
-	public Image hpBar;
-	public Image mpBar;
-	public Image expBar;
-	public Text hpText;
-	public Text mpText;
-	public Text lvText;
+	Image hpBar;
+	Image stmBar;
+	Image expBar;
+	Text hpText;
+	Text stmText;
+	Text lvText;
 	public GameObject player;
-	
+	public SkillTreeUi skillTree;
+
 	void Start(){
 		if(!player){
 			player = GameObject.FindWithTag("Player");
 		}
+
+		hpBar = GameObject.Find("HpGauge").GetComponent<Image>();
+		stmBar = GameObject.Find("MpGauge").GetComponent<Image>();
+		expBar = GameObject.Find("ExpGauge").GetComponent<Image>();
+		hpText = GameObject.Find("HP-Text").GetComponent<Text>();
+		stmText = GameObject.Find("MP-Text").GetComponent<Text>();
+		lvText = GameObject.Find("LvText").GetComponent<Text>();
 	}
 	
 	void Update(){
@@ -27,12 +33,12 @@ public class HealthBar : MonoBehaviour {
 		
 		int maxHp = stat.totalStat.health;
 		float hp = stat.health;
-		int maxMp = stat.totalStat.mana;
-		float mp = stat.mana;
+		int maxMp = stat.totalStat.stamina;
+		float stm = stat.stamina;
 		int exp = stat.exp;
 		float maxExp = stat.maxExp;
 		float curHp = hp/maxHp;
-		float curMp = mp/maxMp;
+		float curMp = stm/maxMp;
 		float curExp = exp/maxExp;
 
 		//HP Gauge
@@ -49,17 +55,17 @@ public class HealthBar : MonoBehaviour {
 			}
 		}
 		
-		//MP Gauge
-		if(curMp > mpBar.fillAmount){
-			mpBar.fillAmount += 1 / 1 * Time.unscaledDeltaTime;
-			if(mpBar.fillAmount > curMp){
-				mpBar.fillAmount = curMp;
+		//STM Gauge
+		if(curMp > stmBar.fillAmount){
+			stmBar.fillAmount += 1 / 1 * Time.unscaledDeltaTime;
+			if(stmBar.fillAmount > curMp){
+				stmBar.fillAmount = curMp;
 			}
 		}	
-		if(curMp < mpBar.fillAmount){
-			mpBar.fillAmount -= 1 / 1 * Time.unscaledDeltaTime;
-			if(mpBar.fillAmount < curMp){
-				mpBar.fillAmount = curMp;
+		if(curMp < stmBar.fillAmount){
+			stmBar.fillAmount -= 1 / 1 * Time.unscaledDeltaTime;
+			if(stmBar.fillAmount < curMp){
+				stmBar.fillAmount = curMp;
 			}
 		}
 		
@@ -73,8 +79,8 @@ public class HealthBar : MonoBehaviour {
 		if(hpText){
 			hpText.text = hp.ToString() + "/" + maxHp.ToString();
 		}
-		if(mpText){
-			mpText.text = mp.ToString() + "/" + maxMp.ToString();
+		if(stmText){
+			stmText.text = stm.ToString() + "/" + maxMp.ToString();
 		}
 	}
 }
