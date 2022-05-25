@@ -89448,6 +89448,12 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114257113180614090, guid: a19afec8482aedb42b757bb048dbab87,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1708005041575978463, guid: c0e7d7a2f6f24464e83632e326969539,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19afec8482aedb42b757bb048dbab87, type: 3}
 --- !u!1 &1410854673
