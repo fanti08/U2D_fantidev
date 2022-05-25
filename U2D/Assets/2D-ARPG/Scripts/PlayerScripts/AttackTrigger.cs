@@ -118,7 +118,9 @@ public class AttackTrigger : MonoBehaviour{
 	[HideInInspector]
 	public Transform minion;
 
-	void Awake(){
+    private TopdownInputController2D inputController;
+
+    void Awake(){
 		if(!GlobalStatus.mainPlayer){
 			GlobalStatus.mainPlayer = this.gameObject;
 		}
@@ -155,6 +157,8 @@ public class AttackTrigger : MonoBehaviour{
 		Vector3 pos = transform.position;
 		pos.z = 0;
 		transform.position = pos;
+
+        inputController = GetComponent<TopdownInputController2D>();
 	}
 	
 	void Update(){
@@ -227,12 +231,27 @@ public class AttackTrigger : MonoBehaviour{
 			stat.GuardBreak("cancelGuard");
 		}
 
-		//------Aiming---------
-		if(attackPoint && aimAtMouse){
-			Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(attackPoint.position);
-			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-		attackPoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-			attackPoint.position = transform.position;
+        //------Aiming---------
+        if (attackPoint) {
+            //Aiming with mouse (pc)
+            if (aimAtMouse)
+            {
+                Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(attackPoint.position);
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                attackPoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                attackPoint.position = transform.position;
+            }
+            //Aiming with joystick (mobile)
+            else
+            {
+                Vector2 dir = inputController.joyStick.position;
+                if (dir.sqrMagnitude != 0)
+                {
+                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                    attackPoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                }
+                attackPoint.position = transform.position;
+            }
 		}
 
 		//Release Charging
