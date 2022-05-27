@@ -89448,6 +89448,12 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114257113180614090, guid: a19afec8482aedb42b757bb048dbab87,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1708005041575978463, guid: c0e7d7a2f6f24464e83632e326969539,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19afec8482aedb42b757bb048dbab87, type: 3}
 --- !u!1 &1410854673
@@ -102466,6 +102472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7578216622817569669}
+  - component: {fileID: 7575971641381683166}
   m_Layer: 0
   m_Name: AttackPoint
   m_TagString: Untagged
@@ -102473,6 +102480,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &7575971641381683166
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575971641381683165}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a00f69351ef87b419be345a553e9fae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7576139503746861993
 GameObject:
   m_ObjectHideFlags: 0
@@ -102561,7 +102587,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 694acc4400b2a9a4e87babbfef79aaea, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.834}
+  m_Color: {r: 0.8627451, g: 0.023529412, b: 0.015686275, a: 0.834}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

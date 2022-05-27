@@ -257,16 +257,20 @@ public class AttackTrigger : MonoBehaviour{
 		//Release Charging
 		if(Input.GetButtonUp("Fire1") && charging && !mobileMode){
 			charging = false;
-			if(Time.timeScale == 0.0f || stat.freeze || GlobalStatus.freezeAll || GlobalStatus.freezePlayer || stat.block || stat.flinch){
-				if(chargingEffect){
-					Destroy(chargingEffect.gameObject);
+            if (Time.timeScale == 0.0f || stat.freeze || GlobalStatus.freezeAll || GlobalStatus.freezePlayer || stat.block || stat.flinch){
+				if(chargingEffect)
+                {
+                    attackPoint.GetComponent<Animator>().CrossFade("Idle", .2f);
+                    Destroy(chargingEffect.gameObject);
 				}
 				c = 0;
 				return;
 			}
 			int b = charge.Length -1;
-			if(chargingEffect){
-				Destroy(chargingEffect.gameObject);
+			if(chargingEffect)
+            {
+                attackPoint.GetComponent<Animator>().CrossFade("Idle", .2f);
+                Destroy(chargingEffect.gameObject);
 			}
 			while(b >= 0){
 				if(Time.time > charge[b].currentChargeTime){
@@ -357,7 +361,8 @@ public class AttackTrigger : MonoBehaviour{
 								Destroy(chargingEffect.gameObject);
 							}
 							chargingEffect = Instantiate(charge[b].chargeEffect , transform.position, transform.rotation) as GameObject;
-							chargingEffect.transform.parent = this.transform;
+                            attackPoint.GetComponent<Animator>().CrossFade("Charge" + (b + 1).ToString(), charge[b].attackPointAnimTransitionDuration);
+                            chargingEffect.transform.parent = this.transform;
 							ch = b;
 						}
 					}
@@ -732,15 +737,19 @@ public class AttackTrigger : MonoBehaviour{
 		if(charging){
 			charging = false;
 			if(Time.timeScale == 0.0f || stat.freeze || GlobalStatus.freezeAll || GlobalStatus.freezePlayer || stat.block || stat.flinch){
-				if(chargingEffect){
-					Destroy(chargingEffect.gameObject);
+				if(chargingEffect)
+                {
+                    attackPoint.GetComponent<Animator>().CrossFade("Idle", .2f);
+                    Destroy(chargingEffect.gameObject);
 				}
 				c = 0;
 				return;
 			}
 			int b = charge.Length -1;
-			if(chargingEffect){
-				Destroy(chargingEffect.gameObject);
+			if(chargingEffect)
+            {
+                attackPoint.GetComponent<Animator>().CrossFade("Idle", .2f);
+                Destroy(chargingEffect.gameObject);
 			}
 			while(b >= 0){
 				if(Time.time > charge[b].currentChargeTime){
@@ -1094,4 +1103,6 @@ public class ChargeAtk{
 	public AudioClip soundEffect2;
 	[HideInInspector]
 	public float currentChargeTime = 1.0f;
+    public float attackPointAnimTransitionDuration = .3f;
+
 }
