@@ -4273,7 +4273,6 @@ MonoBehaviour:
     soundEffect: {fileID: 0}
     soundEffect2: {fileID: 0}
     currentChargeTime: 0
-    attackPointAnimatorStateName: Charge2
     attackPointAnimTransitionDuration: 0.3
   - chargeEffect: {fileID: 1519547905622888, guid: 83c46df197433d441a50d8555d55a409,
       type: 3}
@@ -4286,7 +4285,6 @@ MonoBehaviour:
     soundEffect: {fileID: 0}
     soundEffect2: {fileID: 0}
     currentChargeTime: 0
-    attackPointAnimatorStateName: Charge1
     attackPointAnimTransitionDuration: 0.3
   charging: 0
   chargingEffect: {fileID: 0}
@@ -29943,12 +29941,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1711048348138591323}
   m_Layer: 0
-  m_Name: AttackPoint
+  m_Name: /AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1711048348138591323
 Transform:
   m_ObjectHideFlags: 0
