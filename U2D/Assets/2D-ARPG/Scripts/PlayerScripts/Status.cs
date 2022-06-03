@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Spine.Unity;
 
 public class Status : MonoBehaviour {
-	public Animator mainSprite;
+	public SkeletonAnimation mainSprite;
 	public Transform deathPrefab;
 
 	public string characterName = "";
@@ -93,8 +94,8 @@ public class Status : MonoBehaviour {
 		if(characterName != ""){
 			gameObject.name = characterName;
 		}
-		if(!mainSprite && GetComponent<Animator>()){
-			mainSprite = GetComponent<Animator>();
+		if(!mainSprite && GetComponent<SkeletonAnimation>()){
+			mainSprite = GetComponent<SkeletonAnimation>();
 		}
 		CalculateStatus();
 		if(GetComponentInChildren<MonsterHealthBar>()){
@@ -463,14 +464,14 @@ public class Status : MonoBehaviour {
 		}
 		block = true;
 		if(anim != ""){
-			mainSprite.SetTrigger(anim);
+			//mainSprite.SetTrigger(anim);
 		}
 	}
 	
 	public void GuardBreak(string anim){
 		block = false;
 		if(anim != ""){
-			mainSprite.SetTrigger(anim);
+			//mainSprite.SetTrigger(anim);
 		}
 	}
 
@@ -487,7 +488,7 @@ public class Status : MonoBehaviour {
 		//canControl = false;
 		StartCoroutine(KnockBack());
 		if(mainSprite && !block){
-			mainSprite.SetTrigger("hurt");
+			//mainSprite.SetTrigger("hurt");
 		}
 		//canControl = true;
 	}

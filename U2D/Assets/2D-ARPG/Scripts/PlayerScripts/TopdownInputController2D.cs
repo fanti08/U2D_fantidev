@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Spine.Unity;
 
 [RequireComponent(typeof (Rigidbody2D))]
 [RequireComponent(typeof (AttackTrigger))]
@@ -7,7 +8,7 @@ using UnityEngine;
 [AddComponentMenu("2D Action-RPG Kit/Create Player(Top Down)")]
 
 public class TopdownInputController2D : MonoBehaviour {
-	private Animator anim;
+	private SkeletonAnimation anim;
 	private Rigidbody2D rb;
 	public float speed = 6;
 	private float dirX, dirY;
@@ -23,19 +24,38 @@ public class TopdownInputController2D : MonoBehaviour {
 	private float moveHorizontal;
 	private float moveVertical;
 
+    [SerializeField]
+    private AnimationReferenceAsset runAnim, dashAnim, idleAnim;
+    private AnimationReferenceAsset currentAnimation;
+
+    public void ResetAnimation()
+    {
+        currentAnimation = null;
+    }
+    private void SetAnimation(AnimationReferenceAsset animAsset, bool loop)
+    {
+        if (animAsset != currentAnimation)
+        {
+            anim.state.SetAnimation(0, animAsset, loop);
+            currentAnimation = animAsset;
+        }
+    }
+
 	void Start(){
 		rb = GetComponent<Rigidbody2D>();
 		rb.gravityScale = 0;
 		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 		stat = GetComponent<Status>();
 		atk = GetComponent<AttackTrigger>();
-		if(!anim && stat.mainSprite){
-			anim = stat.mainSprite;
-		}
-		if(!anim && GetComponent<Animator>()){
-			anim = GetComponent<Animator>();
-		}
-	}
+		//if(!anim && stat.mainSprite){
+		//	anim = stat.mainSprite;
+		//}
+		if(!anim && GetComponentInChildren<SkeletonAnimation>()){
+			anim = GetComponentInChildren<SkeletonAnimation>();
+        }
+        currentAnimation = idleAnim;
+        SetAnimation(idleAnim, true);
+    }
 
 	void Update(){
 		if(Time.timeScale == 0.0f || stat.freeze || GlobalStatus.freezeAll || GlobalStatus.freezePlayer || !stat.canControl && !atk.meleefwd){
@@ -44,7 +64,7 @@ public class TopdownInputController2D : MonoBehaviour {
 				CancelDash();
 			}
 			if(anim){
-				anim.SetBool("run" , false);
+                SetAnimation(idleAnim, true);
 			}
 			return;
 		}
@@ -113,12 +133,12 @@ public class TopdownInputController2D : MonoBehaviour {
 		if(moveHorizontal != 0 || moveVertical != 0){
 			moving = true;
 			if(anim){
-				anim.SetBool("run" , moving);
+                SetAnimation(runAnim, true);
 			}
 		}else if(moving){
 			moving = false;
 			if(anim){
-				anim.SetBool("run" , moving);
+                SetAnimation(idleAnim, true);
 			}
 		}
 	}
@@ -136,8 +156,7 @@ public class TopdownInputController2D : MonoBehaviour {
 				atk.LookAtMouse();
 			}
 			onDashing = true;
-			anim.SetTrigger("dash");
-			anim.ResetTrigger("cancelDash");
+            SetAnimation(dashAnim, false);
 			yield return new WaitForSeconds(dashDuration);
 			CancelDash();
 		}
@@ -145,8 +164,8 @@ public class TopdownInputController2D : MonoBehaviour {
 	
 	public void CancelDash(){
 		StopCoroutine("Dash");
-		anim.SetTrigger("cancelDash");
-		onDashing = false;
+        SetAnimation(idleAnim, true);
+        onDashing = false;
 	}
 
 }
