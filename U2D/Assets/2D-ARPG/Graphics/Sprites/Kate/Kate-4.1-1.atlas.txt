@@ -1,0 +1,479 @@
+Kate-4.1-1.png
+size:4096,4096
+filter:Linear,Linear
+pma:true
+Kate Vest Top Jeans/Head/Face-Parts-Base/eye-ball-B
+bounds:558,4055,44,38
+offsets:1,1,46,40
+Kate Vest Top Jeans/Head/Face-Parts-Base/eye-ball-F
+bounds:795,4036,70,57
+offsets:1,1,72,59
+Kate Vest Top Jeans/Head/Face-Parts-Base/eye-brows-high-up-B
+bounds:1,4075,55,18
+offsets:1,1,57,20
+Kate Vest Top Jeans/Head/Face-Parts-Base/eye-brows-high-up-F
+bounds:3777,4008,106,85
+offsets:1,1,108,87
+Kate Vest Top Jeans/Head/Face-Parts-Base/eye-lids-squeezed-B
+bounds:1091,4031,62,97
+offsets:1,1,64,99
+rotate:90
+Kate Vest Top Jeans/Head/Face-Parts-Base/eye-lids-squeezed-F
+bounds:3329,4012,113,81
+offsets:1,1,115,83
+Kate Vest Top Jeans/Head/Face-Parts-Base/eye-pupils-B
+bounds:190,4068,25,41
+offsets:1,1,27,43
+rotate:90
+Kate Vest Top Jeans/Head/Face-Parts-Base/eye-pupils-F
+bounds:232,4060,33,47
+offsets:1,1,35,49
+rotate:90
+Kate Vest Top Jeans/Head/Faces/chilling/eye-lids-half-closed-B
+bounds:1609,4029,64,70
+offsets:1,1,66,72
+rotate:90
+Kate Vest Top Jeans/Head/Faces/chilling/eye-lids-half-closed-F
+bounds:3557,4009,109,84
+offsets:1,1,111,86
+Kate Vest Top Jeans/Head/Faces/chilling/mouth-OWUQ
+bounds:1189,4031,102,62
+offsets:1,1,104,64
+Kate Vest Top Jeans/Head/Faces/dead/eye-brows-dead-B
+bounds:663,4043,131,50
+offsets:1,1,133,52
+Kate Vest Top Jeans/Head/Faces/dead/eye-brows-dead-F
+bounds:515,3956,101,97
+offsets:1,1,103,99
+Kate Vest Top Jeans/Head/Faces/dead/mouth-CONS-dead
+bounds:1879,4025,102,68
+offsets:1,1,104,70
+Kate Vest Top Jeans/Head/Faces/friendly/eye-lashes-B
+bounds:57,4074,64,19
+offsets:1,1,66,21
+Kate Vest Top Jeans/Head/Faces/friendly/eye-lashes-F
+bounds:1292,4031,84,62
+offsets:1,1,86,64
+Kate Vest Top Jeans/Head/Faces/friendly/eye-lids-B
+bounds:866,4032,61,70
+offsets:1,1,63,72
+rotate:90
+Kate Vest Top Jeans/Head/Faces/idle/eye-lid-B-idle
+bounds:866,4032,61,70
+offsets:1,1,63,72
+rotate:90
+Kate Vest Top Jeans/Head/Faces/mad/eye-lid-B-mad
+bounds:866,4032,61,70
+offsets:1,1,63,72
+rotate:90
+Kate Vest Top Jeans/Head/Faces/friendly/eye-lids-F
+bounds:3667,4009,109,84
+offsets:1,1,111,86
+Kate Vest Top Jeans/Head/Faces/idle/eye-lid-F-idle
+bounds:3667,4009,109,84
+offsets:1,1,111,86
+Kate Vest Top Jeans/Head/Faces/mad/eye-lid-F-mad
+bounds:3667,4009,109,84
+offsets:1,1,111,86
+Kate Vest Top Jeans/Head/Faces/friendly/mouth-friendly-EH
+bounds:2781,4019,90,74
+offsets:1,1,92,76
+Kate Vest Top Jeans/Head/Faces/idle/eye-brow-B-idle
+bounds:603,4054,59,39
+offsets:1,1,61,41
+Kate Vest Top Jeans/Head/Faces/idle/eye-brow-F-idle
+bounds:90,3976,102,91
+offsets:1,1,104,93
+Kate Vest Top Jeans/Head/Faces/idle/eye-lash-B-idle
+bounds:122,4069,67,24
+offsets:1,1,69,26
+Kate Vest Top Jeans/Head/Faces/mad/eye-lash-B-mad
+bounds:122,4069,67,24
+offsets:1,1,69,26
+Kate Vest Top Jeans/Head/Faces/idle/eye-lash-F-idle
+bounds:1784,4026,94,67
+offsets:1,1,96,69
+Kate Vest Top Jeans/Head/Faces/mad/eye-lash-F-mad
+bounds:1784,4026,94,67
+offsets:1,1,96,69
+Kate Vest Top Jeans/Head/Faces/idle/mouth-idle-MBP
+bounds:1680,4029,103,64
+offsets:1,1,105,66
+Kate Vest Top Jeans/Head/Faces/joy/mouth-AH-joy
+bounds:2872,4019,90,74
+offsets:1,1,92,76
+Kate Vest Top Jeans/Head/Faces/mad/eye-brow-B-mad
+bounds:322,4056,59,37
+offsets:1,1,61,39
+Kate Vest Top Jeans/Head/Faces/pain/eye-brows-pain-B
+bounds:322,4056,59,37
+offsets:1,1,61,39
+Kate Vest Top Jeans/Head/Faces/mad/eye-brow-F-mad
+bounds:3975,4007,102,86
+offsets:1,1,104,88
+Kate Vest Top Jeans/Head/Faces/pain/eye-brows-pain-F
+bounds:3975,4007,102,86
+offsets:1,1,104,88
+Kate Vest Top Jeans/Head/Faces/mad/mouth-CONS-mad
+bounds:2587,4020,90,73
+offsets:1,1,92,75
+Kate Vest Top Jeans/Head/Faces/pain/mouth-CONS-pain
+bounds:2678,4020,102,73
+offsets:1,1,104,75
+Kate Vest Top Jeans/Head/Faces/relaxed/eye-lids-closed-B
+bounds:937,4032,61,62
+offsets:1,1,63,64
+rotate:90
+Kate Vest Top Jeans/Head/Faces/relaxed/eye-lids-closed-F
+bounds:3443,4012,113,81
+offsets:1,1,115,83
+Kate Vest Top Jeans/Head/Faces/relaxed/mouth-FV-relaxed
+bounds:1000,4032,90,61
+offsets:1,1,92,63
+Kate Vest Top Jeans/Head/Hair/hair-front-stroke
+bounds:3174,3199,248,412
+offsets:92,18,466,430
+rotate:90
+Kate Vest Top Jeans/Head/Hair/hair-side-stroke
+bounds:3340,3681,177,391
+offsets:289,37,466,430
+rotate:90
+Kate Vest Top Jeans/Head/Hair/ponytail-stroke
+bounds:3224,3448,232,426
+rotate:90
+Kate Vest Top Jeans/Head/Heads-Base/head-stroke
+bounds:2691,1908,406,426
+offsets:48,0,490,430
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/Hand Weapon P320 SB B/Weapon P320 SB RS B/P320-SB-RS-barrel-B
+bounds:1982,4025,68,103
+offsets:1,1,70,105
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/Hand Weapon P320 SB B/Weapon P320 SB RS B/P320-SB-RS-base-B
+bounds:1143,2447,349,320
+offsets:1,1,351,322
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/Hand Weapon P320 SB B/Weapon P320 SB RS B/P320-SB-RS-mag17-full-B
+bounds:1961,3890,263,133
+offsets:1,1,265,135
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/Hand Weapon P320 SB B/Weapon P320 SB RS B/P320-SB-RS-reflex-sight-B
+bounds:1,3985,88,88
+offsets:1,1,90,90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/Hand Weapon P320 SB B/Weapon P320 SB RS B/P320-SB-RS-slide-B
+bounds:1381,3540,193,298
+offsets:1,1,195,300
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/Hand Weapon P320 SB B/hand-holding-gun-tight-trigger-B
+bounds:3732,3669,178,203
+offsets:1,1,180,205
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/Hand Weapon P320 SB B/hand-holding-gun-tight-trigger-B-stroke
+bounds:838,3557,185,196
+offsets:1,1,187,198
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/P320-SB-RS-mag17-empty-B
+bounds:1705,3892,255,132
+offsets:1,1,257,134
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/arm-B-stroke
+bounds:3651,3435,233,289
+offsets:1,1,235,291
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Arm B/shoulder-B-stroke
+bounds:1,3814,154,432
+offsets:1,1,156,434
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Hip/hip
+bounds:3118,1888,424,480
+offsets:1,1,426,482
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Hip/hip-stroke
+bounds:3599,1879,433,482
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/foot-B
+bounds:434,3785,251,156
+offsets:1,1,253,158
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/foot-B-stroke
+bounds:1700,3730,259,161
+offsets:1,1,261,163
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/foot-F
+bounds:686,3750,250,156
+offsets:1,1,252,158
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/foot-F-stroke
+bounds:1960,3728,259,161
+offsets:1,1,261,163
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/gunholster-back-B
+bounds:193,3969,86,321
+offsets:1,1,88,323
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/gunholster-strap-B
+bounds:2220,3714,289,167
+offsets:1,1,291,169
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/gunholster-strap-jeans-B
+bounds:2510,3712,324,167
+offsets:1,1,326,169
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/leg-B
+bounds:517,3331,220,772
+offsets:1,1,222,774
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/leg-B-stroke
+bounds:1810,3278,228,772
+offsets:1,1,230,774
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/leg-F
+bounds:379,2518,297,763
+offsets:1,1,299,765
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/leg-F-stroke
+bounds:1493,2440,300,763
+offsets:1,1,302,765
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/pants-long-upper-B-stroke
+bounds:3410,2926,260,539
+offsets:1,1,262,541
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/thigh-B
+bounds:3587,3187,247,506
+offsets:1,1,249,508
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/thigh-B-stroke
+bounds:1731,3020,257,516
+offsets:1,1,259,518
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/thigh-F
+bounds:1,3106,248,507
+offsets:1,1,250,509
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Arm B, Leg B & Hip/Leg B/thigh-F-stroke
+bounds:2897,2941,257,512
+offsets:1,1,259,514
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/boot-B
+bounds:1680,3532,195,327
+offsets:11,1,207,329
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/boot-F
+bounds:2287,3507,204,355
+offsets:1,1,206,357
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/boot-foot-B-stroke
+bounds:1035,3552,345,188
+offsets:1,1,347,190
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/boot-foot-F-stroke
+bounds:251,3601,343,183
+offsets:1,1,345,185
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/gunholster-F
+bounds:2577,2973,264,319
+offsets:1,1,266,321
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/gunholster-front-B
+bounds:2583,3238,250,317
+offsets:1,1,252,319
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/gunholster-front-B-stroke
+bounds:2248,3018,259,328
+offsets:1,1,261,330
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/hotpants
+bounds:392,2167,475,350
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/hotpants-B
+bounds:1,3367,237,264
+offsets:1,1,239,266
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/hotpants-B-stroke
+bounds:239,3355,245,277
+offsets:1,1,247,279
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/hotpants-F
+bounds:2901,3227,272,250
+offsets:1,1,274,252
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/hotpants-F-stroke
+bounds:1457,3041,273,255
+offsets:1,1,275,257
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/hotpants-stroke
+bounds:1298,2086,473,353
+offsets:1,1,475,355
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/pants-long-lower-B
+bounds:509,3088,242,692
+offsets:1,1,244,694
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/pants-long-lower-F
+bounds:462,2816,271,687
+offsets:1,1,273,689
+rotate:90
+Kate Vest Top Jeans/Lower Body + Back Parts/Lower Body Parts F+B/pants-long-upper-F
+bounds:3452,2643,282,472
+offsets:1,1,284,474
+rotate:90
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon Colt SB/27
+bounds:3593,2313,495,329
+offsets:20,101,544,544
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon Colt SB/Colt-SB
+bounds:3091,2315,501,327
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon Knive/holding-knive-F-stroke
+bounds:1290,3297,234,519
+rotate:90
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon OR-12/Weapon OR-12/OR-12
+bounds:769,876,1741,561
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon OR-12/holding-stock-tight-F
+bounds:3860,3848,224,158
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon P320 SB F/265
+bounds:2257,2380,442,315
+offsets:92,116,576,576
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon P320 SB F/Weapon P320 SB RS F/P320-SB-RS-barrel-F
+bounds:3884,4008,85,90
+offsets:1,1,87,92
+rotate:90
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon P320 SB F/Weapon P320 SB RS F/P320-SB-RS-base-F
+bounds:1150,2768,396,272
+offsets:1,1,398,274
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon P320 SB F/Weapon P320 SB RS F/P320-SB-RS-mag17-empty-F
+bounds:595,3566,242,183
+offsets:1,1,244,185
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon P320 SB F/Weapon P320 SB RS F/P320-SB-RS-mag17-full-F
+bounds:1,3632,249,181
+offsets:1,1,251,183
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon P320 SB F/Weapon P320 SB RS F/P320-SB-RS-reflex-sight-F
+bounds:3232,4014,96,79
+offsets:1,1,98,81
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon P320 SB F/Weapon P320 SB RS F/P320-SB-RS-slide-F
+bounds:1202,3043,254,253
+offsets:1,1,256,255
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon P320 SB F/holding-gun-tight-trigger-F-stroke
+bounds:2835,3702,242,172
+offsets:0,7,242,179
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon Uzi SB/276
+bounds:1772,2082,478,357
+offsets:70,28,580,580
+Kate Vest Top Jeans/Upper Body/Arm F/Hand Weapon Uzi SB/Uzi SB
+bounds:517,1660,600,433
+Kate Vest Top Jeans/Upper Body/Arm F/arm-F-stroke
+bounds:3142,2645,309,280
+offsets:1,1,311,282
+Kate Vest Top Jeans/Upper Body/Arm F/bandana-stroke
+bounds:2931,3478,292,214
+offsets:0,0,293,214
+Kate Vest Top Jeans/Upper Body/Arm F/shoulder-F-stroke
+bounds:1,2182,335,390
+offsets:1,1,337,392
+rotate:90
+Kate Vest Top Jeans/Upper Body/Arm F/shoulder-tattoo-F-stroke
+bounds:2700,2329,334,390
+offsets:1,1,336,392
+rotate:90
+Kate Vest Top Jeans/Upper Body/Chest/chest
+bounds:1638,1559,457,676
+offsets:1,1,459,678
+rotate:90
+Kate Vest Top Jeans/Upper Body/Chest/chest-stroke
+bounds:2315,1438,469,681
+rotate:90
+Kate Vest Top Jeans/Upper Body/Hands B+F/Back Hand F/back-hand-F
+bounds:1446,3734,253,163
+offsets:1,1,255,165
+Kate Vest Top Jeans/Upper Body/Hands B+F/Back Hand F/back-hand-F-stroke
+bounds:3078,3693,261,172
+offsets:1,1,263,174
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/9mm-bullet
+bounds:280,4057,41,36
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/9mm-cartridge
+bounds:382,4056,99,37
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/9mm-casing
+bounds:482,4056,75,37
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/P320-SB-RS-reference
+bounds:1,2538,377,302
+offsets:1,1,379,304
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/back-hand-B
+bounds:2652,3880,244,138
+offsets:1,1,246,140
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/back-hand-B-stroke
+bounds:3122,3866,243,145
+offsets:1,1,245,147
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/holding-shaft-B
+bounds:1078,3901,186,129
+offsets:1,1,188,131
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/holding-shaft-B-stroke
+bounds:2456,3882,195,137
+offsets:1,1,197,139
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/holding-tight-B
+bounds:1265,3899,215,130
+offsets:1,1,217,132
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/holding-tight-B-stroke
+bounds:2897,3875,224,139
+offsets:1,1,226,141
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/side-hand-B
+bounds:1377,4030,231,63
+offsets:1,1,233,65
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/side-hand-B-stroke
+bounds:2346,4022,240,71
+offsets:1,1,242,73
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/strest-hand-B
+bounds:3366,3860,246,148
+offsets:1,1,248,150
+Kate Vest Top Jeans/Upper Body/Hands B+F/Hands B/strest-hand-B-stroke
+bounds:937,3743,254,157
+offsets:1,1,256,159
+Kate Vest Top Jeans/Upper Body/Hands B+F/Holding Gun Tight F/holding-gun-tight-F
+bounds:2008,3510,278,203
+offsets:1,1,280,205
+Kate Vest Top Jeans/Upper Body/Hands B+F/Holding Gun Tight F/holding-gun-tight-F-stroke
+bounds:2643,3489,287,212
+offsets:1,1,289,214
+Kate Vest Top Jeans/Upper Body/Hands B+F/Holding Gun Tight Trigger F/hand-holding-gun-tight-trigger-F-stroke
+bounds:2225,3885,230,136
+offsets:1,1,232,138
+Kate Vest Top Jeans/Upper Body/Hands B+F/Holding Gun Tight Trigger F/holding-gun-tight-trigger-F
+bounds:1481,3898,223,130
+offsets:1,1,225,132
+Kate Vest Top Jeans/Upper Body/Hands B+F/Holding Shaft F/holding-shaft-F
+bounds:718,3915,175,116
+offsets:1,1,177,118
+Kate Vest Top Jeans/Upper Body/Hands B+F/Holding Shaft F/holding-shaft-F-stroke
+bounds:894,3907,183,124
+offsets:1,1,185,126
+Kate Vest Top Jeans/Upper Body/Hands B+F/Side Hand F/side-hand-F
+bounds:2086,4024,259,69
+offsets:1,1,261,71
+Kate Vest Top Jeans/Upper Body/Hands B+F/Side Hand F/side-hand-F-stroke
+bounds:2963,4015,268,78
+offsets:1,1,270,80
+Kate Vest Top Jeans/Upper Body/Hands B+F/Strest Hand F/strest-hand-F
+bounds:3613,3859,246,148
+offsets:1,1,248,150
+Kate Vest Top Jeans/Upper Body/Hands B+F/Strest Hand F/strest-hand-F-stroke
+bounds:1192,3741,253,157
+offsets:1,1,255,159
+Kate Vest Top Jeans/Upper Body/Outerwear/bra
+bounds:868,2094,429,352
+offsets:1,1,431,354
+Kate Vest Top Jeans/Upper Body/Outerwear/bra-stroke
+bounds:2251,2017,439,362
+offsets:1,1,441,364
+Kate Vest Top Jeans/Upper Body/Outerwear/top
+bounds:1,1735,431,515
+offsets:1,1,433,517
+rotate:90
+Kate Vest Top Jeans/Upper Body/Outerwear/top-stroke
+bounds:1118,1648,437,519
+offsets:4,0,441,519
+rotate:90
+Kate Vest Top Jeans/Upper Body/Outerwear/vest
+bounds:2997,1398,480,755
+offsets:1,1,482,757
+rotate:90
+Kate Vest Top Jeans/Upper Body/Outerwear/vest-stroke
+bounds:1,1167,492,767
+rotate:90
+Kate Vest Top Jeans/VFX/muzzle-flash-1
+bounds:1547,2744,446,275
+offsets:2,0,449,276
+Kate Vest Top Jeans/VFX/muzzle-flash-2
+bounds:1994,2741,384,276
+Kate Vest Top Jeans/VFX/muzzle-flash-3
+bounds:1,2841,460,264
+offsets:0,0,460,265
+Kate Vest Top Jeans/VFX/muzzle-flash-4
+bounds:2379,2696,379,276
+offsets:2,0,381,276
+Kate Vest Top Jeans/VFX/muzzle-flash-5
+bounds:2759,2664,382,276
+offsets:3,0,385,276
+Kate Vest Top Jeans/VFX/smoke-glow
+bounds:617,3942,100,100

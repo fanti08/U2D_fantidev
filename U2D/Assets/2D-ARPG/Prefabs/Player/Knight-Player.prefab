@@ -9579,6 +9579,8 @@ MonoBehaviour:
     soundEffect: {fileID: 0}
     soundEffect2: {fileID: 0}
     currentChargeTime: 0
+    attackPointAnimatorStateName: Charge1
+    attackPointAnimTransitionDuration: 0.3
   - chargeEffect: {fileID: 1519547905622888, guid: 83c46df197433d441a50d8555d55a409,
       type: 3}
     chargeAttackPrefab: {fileID: 114820993815017558, guid: c7d04dcf429081547a489a1fa85e901d,
@@ -9590,6 +9592,8 @@ MonoBehaviour:
     soundEffect: {fileID: 0}
     soundEffect2: {fileID: 0}
     currentChargeTime: 0
+    attackPointAnimatorStateName: Charge2
+    attackPointAnimTransitionDuration: 0.3
   charging: 0
   chargingEffect: {fileID: 0}
   ch: 0
