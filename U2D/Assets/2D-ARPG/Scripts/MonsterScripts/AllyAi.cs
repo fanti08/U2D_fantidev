@@ -112,7 +112,7 @@ public class AllyAi : MonoBehaviour {
 		}
 		stat = GetComponent<Status>();
 		if(!anim && stat.mainSprite){
-			//anim = stat.mainSprite;
+			anim = stat.mainSprite;
 		}
 		if(!anim && GetComponent<Animator>()){
 			anim = GetComponent<Animator>();
