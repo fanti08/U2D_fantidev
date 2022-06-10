@@ -46,7 +46,7 @@ public class PlatformerController2D : MonoBehaviour {
 		stat = GetComponent<Status>();
 		atk = GetComponent<AttackTrigger>();
 		if(!anim && stat.mainSprite){
-			//anim = stat.mainSprite;
+			anim = stat.mainSprite;
 		}
 		if(!anim && GetComponent<Animator>()){
 			anim = GetComponent<Animator>();

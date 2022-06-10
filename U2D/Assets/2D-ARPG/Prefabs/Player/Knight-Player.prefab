@@ -9579,7 +9579,6 @@ MonoBehaviour:
     soundEffect: {fileID: 0}
     soundEffect2: {fileID: 0}
     currentChargeTime: 0
-    attackPointAnimatorStateName: Charge1
     attackPointAnimTransitionDuration: 0.3
   - chargeEffect: {fileID: 1519547905622888, guid: 83c46df197433d441a50d8555d55a409,
       type: 3}
@@ -9592,7 +9591,6 @@ MonoBehaviour:
     soundEffect: {fileID: 0}
     soundEffect2: {fileID: 0}
     currentChargeTime: 0
-    attackPointAnimatorStateName: Charge2
     attackPointAnimTransitionDuration: 0.3
   charging: 0
   chargingEffect: {fileID: 0}
@@ -22339,7 +22337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4109779239480094
 Transform:
   m_ObjectHideFlags: 0
@@ -33620,7 +33618,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 382a90d43e4a129449b03c0a1fbf2e3e, type: 2}
+  - {fileID: 2100000, guid: 97662d1547fb0f64e9db0be10fe21f92, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33673,8 +33671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9db98c60740638449864eb028fbe7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 8da8bec90761aa4488b1c3c05d314cc9, type: 2}
-  initialSkinName: Kate Vest Top Jeans Knive
+  skeletonDataAsset: {fileID: 11400000, guid: d3a63480b5eaa5c40b5e78f01191583a, type: 2}
+  initialSkinName: Kate Vest Top Jeans Akimbo
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
   initialFlipY: 0

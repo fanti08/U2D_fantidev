@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using Spine.Unity;
 
 [RequireComponent(typeof (Inventory))]
 [RequireComponent(typeof (SkillStatus))]
@@ -120,8 +119,6 @@ public class AttackTrigger : MonoBehaviour{
 	public Transform minion;
 
     private TopdownInputController2D inputController;
-    [SerializeField]
-    private AnimationReferenceAsset shoot, shootBackwards;
 
     void Awake(){
 		if(!GlobalStatus.mainPlayer){
@@ -226,7 +223,7 @@ public class AttackTrigger : MonoBehaviour{
 
 		//Guard Button
 		if(canBlock && Input.GetKey("f") && !onAttacking && !stat.block){
-			//stat.mainSprite.ResetTrigger("cancelGuard");
+			stat.mainSprite.ResetTrigger("cancelGuard");
 			stat.GuardUp(blockingAnimationTrigger);
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
@@ -847,8 +844,7 @@ public class AttackTrigger : MonoBehaviour{
 			LookAtMouse();
 		}
 		if(attackAnimationTrigger[c] != ""){
-            //stat.mainSprite.SetTrigger(attackAnimationTrigger[c]);
-            SetAttackAnimation(attackAnimationTrigger[c]);
+			stat.mainSprite.SetTrigger(attackAnimationTrigger[c]);
 		}
 		
 		yield return new WaitForSeconds(attackCast);
@@ -869,31 +865,7 @@ public class AttackTrigger : MonoBehaviour{
 		onAttacking = false;
 		GetComponent<Status>().canControl = true;
 	}
-    private void SetAttackAnimation(string attackAnimTrigger)
-    {
-        if (attackAnimTrigger.Equals("bow"))
-        {
-            bool facingRight = attackPoint.localRotation.eulerAngles.z > -90f && attackPoint.localRotation.eulerAngles.z < 90f;
-            bool movingRight = GetComponent<Rigidbody2D>().velocity.x > 0;
-            Spine.TrackEntry trackEntry = null;
-            if (facingRight != movingRight)
-            {
-                trackEntry = stat.mainSprite.state.SetAnimation(0, shootBackwards, false);
-            }
-            else 
-            {
-                trackEntry = stat.mainSprite.state.SetAnimation(0, shoot, false);
-            }
-            if (trackEntry != null)
-            {
-                trackEntry.Complete += AnimationEntry_Complete;
-            }
-        }
-    }
-    private void AnimationEntry_Complete(Spine.TrackEntry trackEntry)
-    {
-        inputController.ResetAnimation();
-    }
+
 	IEnumerator ChargeAttack(){
 		charging = false;
 		if(!charge[ch].chargeAttackPrefab){
@@ -935,8 +907,8 @@ public class AttackTrigger : MonoBehaviour{
 		if(aimAtMouse){
 			LookAtMouse();
 		}
-		if(charge[ch].chargeAnimation != null){
-			//stat.mainSprite.SetTrigger(charge[ch].chargeAnimationTrigger);
+		if(charge[ch].chargeAnimationTrigger != ""){
+			stat.mainSprite.SetTrigger(charge[ch].chargeAnimationTrigger);
 		}
 		
 		yield return new WaitForSeconds(charge[ch].attackCast);
@@ -1011,7 +983,7 @@ public class AttackTrigger : MonoBehaviour{
 				LookAtMouse();
 			}
 			if(shortcuts[skillID].skill.skillAnimationTrigger != ""){
-				//stat.mainSprite.SetTrigger(shortcuts[skillID].skill.skillAnimationTrigger);
+				stat.mainSprite.SetTrigger(shortcuts[skillID].skill.skillAnimationTrigger);
 			}
 			if(shortcuts[skillID].skill.castEffect){
 				castEff = Instantiate(shortcuts[skillID].skill.castEffect , transform.position , transform.rotation) as GameObject;
@@ -1043,7 +1015,7 @@ public class AttackTrigger : MonoBehaviour{
 			//Addition Hit
 			for(int m = 0; m < shortcuts[skillID].skill.multipleHit.Length; m++){
 				if(shortcuts[skillID].skill.multipleHit[m].skillAnimationTrigger != ""){
-					//stat.mainSprite.SetTrigger(shortcuts[skillID].skill.multipleHit[m].skillAnimationTrigger);
+					stat.mainSprite.SetTrigger(shortcuts[skillID].skill.multipleHit[m].skillAnimationTrigger);
 				}
 				yield return new WaitForSeconds(shortcuts[skillID].skill.multipleHit[m].castTime);
 				
@@ -1105,7 +1077,7 @@ public class AttackTrigger : MonoBehaviour{
 
 	public void TriggerGuard(){
 		if(canBlock && !onAttacking && !stat.block){
-			//stat.mainSprite.ResetTrigger("cancelGuard");
+			stat.mainSprite.ResetTrigger("cancelGuard");
 			stat.GuardUp(blockingAnimationTrigger);
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		}
@@ -1123,9 +1095,8 @@ public class ChargeAtk{
 	public GameObject chargeEffect;
 	public BulletStatus chargeAttackPrefab;
 	public float chargeTime = 1.0f;
-    public AnimationReferenceAsset chargeAnimation;
-
-    public float attackCast = 0.18f;
+	public string chargeAnimationTrigger;
+	public float attackCast = 0.18f;
 	public float attackDelay = 0.12f;
 
 	public AudioClip soundEffect;

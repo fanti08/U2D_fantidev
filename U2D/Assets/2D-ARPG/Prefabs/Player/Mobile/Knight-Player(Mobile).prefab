@@ -426,7 +426,7 @@ RectTransform:
   m_Children:
   - {fileID: 1490604740333938671}
   m_Father: {fileID: 1702647092017273813}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4080,7 +4080,6 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1710846718843289357}
-  - {fileID: 624165513216906718}
   - {fileID: 1702491688927203557}
   - {fileID: 1711048348138591323}
   - {fileID: 1490318261200560697}
@@ -4105,9 +4104,6 @@ MonoBehaviour:
   dashSpeed: 15
   dashDuration: 0.35
   joyStick: {fileID: 1596401215219036873}
-  runAnim: {fileID: 11400000, guid: 757f8449f1c5c80408188003cfbcb6fb, type: 2}
-  dashAnim: {fileID: 11400000, guid: d960214d68b2cf146a783a595fc0afb4, type: 2}
-  idleAnim: {fileID: 11400000, guid: 4e7effa040c1ff5419a320f0fccc2333, type: 2}
 --- !u!114 &1596315763986271493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4120,7 +4116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b65272ed8ab2742a23028e3678469e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainSprite: {fileID: 5485358245276851404}
+  mainSprite: {fileID: 1649239630377542413}
   deathPrefab: {fileID: 4591280014716052, guid: a9c2319ac82165a4490c490669df475a,
     type: 3}
   characterName: Irene
@@ -4271,7 +4267,7 @@ MonoBehaviour:
     chargeAttackPrefab: {fileID: 114761944984916970, guid: 82e3922569e7a0d40a3bc5ddd1502491,
       type: 3}
     chargeTime: 1
-    chargeAnimation: {fileID: 0}
+    chargeAnimationTrigger: sword2
     attackCast: 0.18
     attackDelay: 0.16
     soundEffect: {fileID: 0}
@@ -4283,7 +4279,7 @@ MonoBehaviour:
     chargeAttackPrefab: {fileID: 114820993815017558, guid: c7d04dcf429081547a489a1fa85e901d,
       type: 3}
     chargeTime: 2.2
-    chargeAnimation: {fileID: 0}
+    chargeAnimationTrigger: sword2
     attackCast: 0.18
     attackDelay: 0.16
     soundEffect: {fileID: 0}
@@ -4528,8 +4524,6 @@ MonoBehaviour:
   ignoreMonsterCollision: 1
   dropItemPrefab: {fileID: 0}
   minion: {fileID: 0}
-  shoot: {fileID: 11400000, guid: a8fc83eaa8f8d694ba5bdf4f95a25e4e, type: 2}
-  shootBackwards: {fileID: 11400000, guid: 46c508049dfff50479c431abed0e771f, type: 2}
   draggingItemIcon: {fileID: 1595894438144824897}
 --- !u!50 &1658128930810859489
 Rigidbody2D:
@@ -17162,7 +17156,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708384099931070521}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -17509,7 +17503,7 @@ RectTransform:
   - {fileID: 1489815646445086649}
   - {fileID: 1489894501831880479}
   m_Father: {fileID: 1702647092017273813}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -27632,7 +27626,7 @@ Transform:
   m_LocalScale: {x: 2.3749995, y: 1.1249999, z: 1}
   m_Children: []
   m_Father: {fileID: 1702647092017273813}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1531517761254687667
 SpriteRenderer:
@@ -29966,7 +29960,7 @@ Transform:
   m_Children:
   - {fileID: 1702520974332859603}
   m_Father: {fileID: 1702647092017273813}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708737492606639693
 GameObject:
@@ -33680,125 +33674,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &3068152826827965608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 624165513216906718}
-  - component: {fileID: 4066414860392270116}
-  - component: {fileID: 918412527900628536}
-  - component: {fileID: 5485358245276851404}
-  m_Layer: 0
-  m_Name: Spine GameObject (Kate)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &624165513216906718
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068152826827965608}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0879, y: -0.336, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1702647092017273813}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4066414860392270116
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068152826827965608}
-  m_Mesh: {fileID: 0}
---- !u!23 &918412527900628536
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068152826827965608}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 97662d1547fb0f64e9db0be10fe21f92, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5485358245276851404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068152826827965608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: d3a63480b5eaa5c40b5e78f01191583a, type: 2}
-  initialSkinName: Kate Vest Top Jeans Akimbo
-  fixPrefabOverrideViaMeshFilter: 2
-  initialFlipX: 0
-  initialFlipY: 0
-  updateWhenInvisible: 3
-  separatorSlotNames: []
-  zSpacing: 0
-  useClipping: 1
-  immutableTriangles: 0
-  pmaVertexColors: 1
-  clearStateOnDisable: 0
-  tintBlack: 0
-  singleSubmesh: 0
-  fixDrawOrder: 0
-  addNormals: 0
-  calculateTangents: 0
-  maskInteraction: 0
-  maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
-    materialsOutsideMask: []
-  disableRenderingOnOverride: 1
-  updateTiming: 1
-  _animationName: Akimbo-Idle1
-  loop: 1
-  timeScale: 1
